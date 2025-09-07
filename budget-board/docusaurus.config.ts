@@ -25,6 +25,8 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "teelur", // Usually your GitHub org/user name.
   projectName: "budget-board-docs", // Usually your repo name.
+  deploymentBranch: "main",
+  trailingSlash: false,
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
