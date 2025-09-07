@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /
 ---
 
-# Getting Started
+# Quick Start
 
 ## Deploy with Docker Compose
 
