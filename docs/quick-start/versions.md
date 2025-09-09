@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Versions
 
-Budget Board images are created with the following tags:
+Budget Board images are created with the following tags.
 
 <table>
   <thead>
@@ -20,7 +20,7 @@ Budget Board images are created with the following tags:
     </tr>
     <tr>
       <td>latest</td>
-      <td>Latest CI build. Unstable.</td>
+      <td>Latest CI build. Unstable, use at your own risk.</td>
     </tr>
     <tr>
       <td>vX</td>
