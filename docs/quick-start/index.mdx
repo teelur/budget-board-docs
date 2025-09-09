@@ -1,0 +1,34 @@
+---
+sidebar_position: 1
+slug: /
+---
+
+# Quick Start
+
+## Deploy with Docker Compose
+
+### Sync the compose files to your machine.
+
+```bash
+curl -O https://raw.githubusercontent.com/your-repo/compose.yml && curl -O https://raw.githubusercontent.com/your-repo/compose.override.yml
+```
+
+`compose.yml` contains the base configuration, while `compose.override.yml` contains variables you need to edit.
+
+```mdx-code-block
+import ComposeFiles from "@site/src/components/ComposeFiles";
+
+<ComposeFiles />
+```
+
+### Edit the variables in `compose.override.yml`
+
+If you are just demoing, the compose files will work out of the box. However, if you are deploying to production, you should edit the variables in `compose.override.yml` to suit your needs.
+
+It's strongly recommended to change the default passwords, and to configure email settings for account verification and password recovery. See [Configuration](configuration.md) for more details.
+
+3. Deploy using the command:
+
+```bash
+docker compose up -d
+```
