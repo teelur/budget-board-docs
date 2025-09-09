@@ -1,0 +1,83 @@
+# Importing Data
+
+## Import via CSV
+
+CSV files can be used to mass import transactions.
+
+### Before You Start
+
+If you are importing transactions for an account that is not yet been added to Budget Board, you will need to manually create the account first. This can be done under the `Accounts Configuration` page by clicking the gear icon on the Accounts card in the dashboard.
+
+:::tip
+The name of the target account does not need to match the account name in the CSV file. This mapping will be made later, during the import.
+:::
+
+### Check Your CSV Format
+
+The CSV file must contain a header row with columns that define one or more of the following fields:
+
+- Date
+- Description
+- Category
+- Amount
+
+:::note
+The file is also _required_ to contain a column that defines the account name that the transaction belongs to.
+:::
+
+:::warning
+The category field must match an existing category in Budget Board. If the category does not exist, the transaction will be imported with no category.
+:::
+
+Here is an example file:
+
+```csv title="transactions.csv"
+"Date";"Description";"Category";"Amount";"Account"
+"2023-01-01";"Starbucks";"Restaurants";"-5.00";"Chase"
+"2023-01-02";"Whole Foods";"Groceries";"-50.00";"Chase"
+"2023-01-03";"Paycheck";"Income";"2000.00";"Chase"
+```
+
+### Upload the File
+
+Navigate to the `Transactions` page and click on the `Import` button.
+
+Before selecting your CSV file, ensure that the delimiter matches the one used in your CSV file (e.g., semicolon `;` or comma `,`). Once that is set, select your CSV file.
+
+### Map the Fields
+
+The `Columns Fields` section is where you will map the columns in your CSV file to the transaction fields in Budget Board. If your CSV file contains any columns that match the required fields, they will be automatically mapped for you.
+
+Once you have mapped the desired fields, you should see a preview of the transactions that will be imported in the `Transactions` section above.
+
+### Adjust Options
+
+The `Columns Options` section contains additional options that can be adjusted for the import.
+
+#### Date Format
+
+Use this option to specify the date format used in your CSV file.
+
+#### Invert Amount
+
+If the amounts in your CSV file are inverted (e.g., expenses are positive and income is negative), you can enable this option to correct the amounts during import.
+
+#### Split Income/Expenses into Separate Columns
+
+If your CSV file contains separate columns for income and expenses, you can enable this option and map the respective columns. This will allow Budget Board to correctly categorize the transactions as income or expenses based on the values in these columns.
+
+#### Include Income/Expenses Columns
+
+If your CSV file contains a column that denotes whether a transaction is an income or expense, you can enable this option and map the respective column. You will need to specify the values that denote expenses. All other values will be considered income.
+
+#### Filter duplicates
+
+If you are importing transactions into an account that already contains transactions, you can enable this option to filter out any duplicate transactions. You will need to define which columns should be considered when determining if a transaction is a duplicate.
+
+### Map the Accounts
+
+The `Account Mapping` section is where you will map the account names in your CSV file to the accounts in Budget Board.
+
+### Import the Transactions
+
+Once you have completed the above steps, the `Import` button will become enabled and should display the number of transactions that will be imported. Click the button to start the import process.
