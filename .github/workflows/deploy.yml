@@ -3,7 +3,11 @@ on:
     branches:
       - main
     paths:
-      - "budget-board/**"
+      - "docs/**"
+      - "src/**"
+      - "static/**"
+      - "yarn.lock"
+      - "docusaurus.config.ts"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 jobs:
