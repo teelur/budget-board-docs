@@ -58,3 +58,47 @@ Fill out the required fields and click `Submit` to create the transaction.
 :::tip
 This is useful for creating one-off transactions like a single cash transaction.
 :::
+
+## Categorize Transactions
+
+Now that you have populated your accounts with transactions, you will need to categorize them.
+
+### Category Heirarchy
+
+Categories in Budget Board are structured such that there are parent categories that represent general areas of spending (i.e. Shopping, Entertainment, Food & Dining, etc.).
+
+Each parent category may have a set of child categories that break down spending into more specific areas. For example, the Food & Dining category has child categories: Alcohol & Bars, Coffee Shops, Food Delivery, Groceries, and Restaurants.
+
+### Custom Categories
+
+Budget Board has a default set of transaction categories that can be used to get you started.
+
+If there are any categories that are missing, you can create custom categories by navigating to the Transactions page and clicking on the gear button in the top right corner to open the `Transactions Settings` screen.
+
+A custom category can be designated as a parent category or a child category. If the category is a child category, you will need to specify its parent.
+
+### Assigning Categories
+
+Now that you have the necesary categories, you can start assigning categories to your transactions.
+
+#### Manually Assinging Categories
+
+You can manually categorize transactions by navigating to the Transactions page and clicking on the transaction to edit it. Select the category drop-down to assign a category to the transaction.
+
+#### Automatic Rules
+
+If you would like to automatically categorize your transactions, you can create rules that will apply a category to transactions that match a given set of conditions.
+
+Navigate to the Transactions page and select the gear icon in the top right corner to bring up the `Transactions Settings` screen. Rules can be created under the Automatic Rules section. These rules will be applied when a sync is performed.
+
+:::tip
+Automatic rules are helpful for reoccuring transactions that will always have the same category. For example, paying monthly utilities or rent.
+:::
+
+## Create Budgets
+
+TODO
+
+## Set Goals
+
+TODO
