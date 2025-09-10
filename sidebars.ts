@@ -21,6 +21,11 @@ const sidebars: SidebarsConfig = {
       items: ["deploy/configuration", "deploy/versions"],
     },
     {
+      type: "doc",
+      id: "setting-up/index",
+      label: "Setting Up",
+    },
+    {
       type: "category",
       label: "Features",
       items: ["features/importing-data"],
