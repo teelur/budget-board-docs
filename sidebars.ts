@@ -16,9 +16,9 @@ const sidebars: SidebarsConfig = {
   docs: [
     {
       type: "category",
-      label: "Deploying",
-      link: { type: "doc", id: "deploying/index" },
-      items: ["deploying/configuration", "deploying/versions"],
+      label: "Deploy",
+      link: { type: "doc", id: "deploy/index" },
+      items: ["deploy/configuration", "deploy/versions"],
     },
     {
       type: "category",
