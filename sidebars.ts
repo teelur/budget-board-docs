@@ -16,9 +16,14 @@ const sidebars: SidebarsConfig = {
   docs: [
     {
       type: "category",
-      label: "Quick Start",
-      link: { type: "doc", id: "quick-start/index" },
-      items: ["quick-start/configuration", "quick-start/versions"],
+      label: "Deploy",
+      link: { type: "doc", id: "deploy/index" },
+      items: ["deploy/configuration", "deploy/versions"],
+    },
+    {
+      type: "doc",
+      id: "setting-up/index",
+      label: "Setting Up",
     },
     {
       type: "category",

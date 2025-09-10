@@ -1,18 +1,18 @@
-# Importing Data
+# Importing data
 
 ## Import via CSV
 
-CSV files can be used to mass import transactions.
+CSV files can be used to bulk import transactions.
 
-### Before You Start
+### Before you start
 
-If you are importing transactions for an account that is not yet been added to Budget Board, you will need to manually create the account first. This can be done under the `Accounts Configuration` page by clicking the gear icon on the Accounts card in the dashboard.
+If you're importing transactions for an account that hasn't been added to Budget Board yet, manually create the account first. Do this on the `Accounts Configuration` page by clicking the gear icon on the Accounts card in the Dashboard.
 
 :::tip
-The name of the target account does not need to match the account name in the CSV file. This mapping will be made later, during the import.
+The name of the target account does not need to match the account name in the CSV file. You'll map the account during import.
 :::
 
-### Check Your CSV Format
+### Check your CSV format
 
 The CSV file must contain a header row with columns that define one or more of the following fields:
 
@@ -22,11 +22,11 @@ The CSV file must contain a header row with columns that define one or more of t
 - Amount
 
 :::note
-The file is also _required_ to contain a column that defines the account name that the transaction belongs to.
+The file must also contain a column specifying the account name for each transaction.
 :::
 
 :::warning
-The category field must match an existing category in Budget Board. If the category does not exist, the transaction will be imported with no category.
+The Category field must match an existing category in Budget Board. If it doesn't, the transaction will be imported without a category.
 :::
 
 Here is an example file:
@@ -38,46 +38,46 @@ Here is an example file:
 "2023-01-03";"Paycheck";"Income";"2000.00";"Chase"
 ```
 
-### Upload the File
+### Upload the file
 
-Navigate to the `Transactions` page and click on the `Import` button.
+Navigate to the `Transactions` page and click the `Import` button.
 
-Before selecting your CSV file, ensure that the delimiter matches the one used in your CSV file (e.g., semicolon `;` or comma `,`). Once that is set, select your CSV file.
+Before selecting your CSV file, ensure the delimiter matches the one used in your file (for example, semicolon `;` or comma `,`). Then select your CSV file.
 
-### Map the Fields
+### Map the fields
 
-The `Columns Fields` section is where you will map the columns in your CSV file to the transaction fields in Budget Board. If your CSV file contains any columns that match the required fields, they will be automatically mapped for you.
+In the `Column Fields` section, map CSV columns to transaction fields in Budget Board. If a CSV column matches a required field, it will be mapped automatically.
 
-Once you have mapped the desired fields, you should see a preview of the transactions that will be imported in the `Transactions` section above.
+After mapping fields, a preview of the transactions to be imported appears in the `Transactions` section above.
 
-### Adjust Options
+### Adjust options
 
-The `Columns Options` section contains additional options that can be adjusted for the import.
+The `Column Options` section contains additional settings for the import.
 
-#### Date Format
+#### Date format
 
-Use this option to specify the date format used in your CSV file.
+Specify the date format used in your CSV file.
 
-#### Invert Amount
+#### Invert amount
 
-If the amounts in your CSV file are inverted (e.g., expenses are positive and income is negative), you can enable this option to correct the amounts during import.
+If amounts in your CSV are inverted (for example, expenses are positive and income is negative), enable this option to correct them during import.
 
-#### Split Income/Expenses into Separate Columns
+#### Split income/expenses into separate columns
 
-If your CSV file contains separate columns for income and expenses, you can enable this option and map the respective columns. This will allow Budget Board to correctly categorize the transactions as income or expenses based on the values in these columns.
+If your CSV has separate columns for income and expenses, enable this option and map the appropriate columns. Budget Board will categorize transactions as income or expenses based on those values.
 
-#### Include Income/Expenses Columns
+#### Include income/expenses column
 
-If your CSV file contains a column that denotes whether a transaction is an income or expense, you can enable this option and map the respective column. You will need to specify the values that denote expenses. All other values will be considered income.
+If your CSV contains a column that indicates whether a transaction is income or expense, enable this option and map that column. Specify which values denote expenses; all other values will be considered income.
 
 #### Filter duplicates
 
-If you are importing transactions into an account that already contains transactions, you can enable this option to filter out any duplicate transactions. You will need to define which columns should be considered when determining if a transaction is a duplicate.
+If you're importing into an account that already contains transactions, enable this option to filter out duplicates. Choose which columns should be used to detect duplicates.
 
-### Map the Accounts
+### Map the accounts
 
-The `Account Mapping` section is where you will map the account names in your CSV file to the accounts in Budget Board.
+In the `Account Mapping` section, map account names from your CSV to accounts in Budget Board.
 
-### Import the Transactions
+### Import the transactions
 
-Once you have completed the above steps, the `Import` button will become enabled and should display the number of transactions that will be imported. Click the button to start the import process.
+Once the previous steps are complete, the `Import` button will be enabled and will show the number of transactions to be imported. Click it to start the import process.
