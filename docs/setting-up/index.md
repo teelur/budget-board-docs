@@ -1,104 +1,104 @@
 # Setting Up
 
-## Create Your Login
+## Create your login
 
-When you first connect to Budget Board, you will need to create a login account. Select `Register Here` at the bottom of the login box to create a new login account.
+When you first connect to Budget Board, create a login account by selecting `Register Here` at the bottom of the login box.
 
 :::note
-If you configured an email sender in your compose file, you will need to check your email for a confirmation link before you can login.
+If you configured an email sender in your compose file, check your email for a confirmation link before you can log in.
 :::
 
-## Add Accounts
+## Add accounts
 
-With your newly created login, the first thing you should do is setup all of your accounts you wish to track. This can be done in a few different ways.
+With your newly created login, the first thing you should do is set up all accounts you wish to track. This can be done in a few different ways.
 
 ### Sync via SimpleFIN
 
 You can automatically sync your accounts with a service called [SimpleFIN Bridge](https://beta-bridge.simplefin.org/).
 
-After you setup your SimpleFIN account, you can click the `New Connection` button to generate an access token.
+After you set up your SimpleFIN account, click the `New Connection` button to generate an access token.
 
-Once you have an access token, navigate to the Settings page in Budget Board and enter the access token under the `Link SimpleFIN` section. Click `Save Changes`, and if successful, the section should be marked as `Linked`.
+Once you have an access token, navigate to the Settings page in Budget Board and paste it into the `Link SimpleFIN` section. Click `Save Changes`. If successful, the section will be marked `Linked`.
 
-Click `Sync` in the top right corner to sync your accounts.
+Then click `Sync` in the top-right corner to import your accounts.
 
-### Manually Create Accounts
+### Manually create accounts
 
-Navigate to the `Accounts Configuration` screen by clicking on the gear button in the Accounts card on the Dashboard.
+Navigate to the `Accounts Configuration` screen by clicking the gear button in the Accounts card on the Dashboard.
 
-Click on the `Create Account` button and fill out the dialog to create the account.
+Click the `Create Account` button and fill out the dialog to create the account.
 
-Fill out each of the fields for the account:
+Fill out each field for the account:
 
 - **Category**: The type of account. Used to group account balances during calculations.
 - **Interest Rate**: The interest rate of the account. Used for goal completion predictions.
-- **Hide Account**: Visually hide the account. An option if you don't want to delete the account.
-- **Hide Transactions**: Hides the transactions associated with the account. Useful for accounts like savings accounts or loans where you are just interested in the balance of the account.
+- **Hide Account**: Visually hide the account. Useful if you don't want to delete the account.
+- **Hide Transactions**: Hide transactions associated with the account. Useful for accounts (for example, savings or loans) where you only care about the balance.
 
-## Add Transactions
+## Add transactions
 
-Now that you have your accounts created, you can add transactions to them.
+Now that your accounts exist, you can add transactions.
 
 ### Sync via SimpleFIN
 
-If you already setup SimpleFIN in the previous section, your transactions should automatically get added to their respective accounts on sync.
+If you set up SimpleFIN as described above, transactions will be added automatically to their respective accounts when you run a sync.
 
 ### Import via CSV
 
-If you have many transactions that you want to add to Budget Board, you can use a CSV file to mass import.
+If you have many transactions to add, use a CSV file to import them in bulk.
 
-See [Import via CSV](features/importing-data#import-via-csv) for more details.
+See [Import via CSV](features/importing-data#import-via-csv) for details.
 
-### Manually Create Transactions
+### Manually create transactions
 
-Transactions can be manually created by navigating to the Transactions page and clicking the `+` button in the top right corner.
+Create transactions manually by navigating to the Transactions page and clicking the `+` button in the top-right corner.
 
 Fill out the required fields and click `Submit` to create the transaction.
 
 :::tip
-This is useful for creating one-off transactions like a single cash transaction.
+Useful for one-off transactions, such as a single cash purchase.
 :::
 
-## Categorize Transactions
+## Categorize transactions
 
-Now that you have populated your accounts with transactions, you will need to categorize them.
+Now that your accounts have transactions, you'll need to categorize them.
 
-### Category Heirarchy
+### Category Hierarchy
 
-Categories in Budget Board are structured such that there are parent categories that represent general areas of spending (i.e. Shopping, Entertainment, Food & Dining, etc.).
+Categories in Budget Board are structured with parent categories representing broad areas of spending (for example: Shopping, Entertainment, Food & Dining).
 
-Each parent category may have a set of child categories that break down spending into more specific areas. For example, the Food & Dining category has child categories: Alcohol & Bars, Coffee Shops, Food Delivery, Groceries, and Restaurants.
+Each parent category can have child categories to break spending into more specific areas. For example, the Food & Dining parent category includes child categories such as Alcohol & Bars, Coffee Shops, Food Delivery, Groceries, and Restaurants.
 
-### Custom Categories
+### Custom categories
 
-Budget Board has a default set of transaction categories that can be used to get you started.
+Budget Board provides a default set of transaction categories to get you started.
 
-If there are any categories that are missing, you can create custom categories by navigating to the Transactions page and clicking on the gear button in the top right corner to open the `Transactions Settings` screen.
+If you need additional categories, create custom categories on the Transactions page by clicking the gear button in the top-right corner to open `Transactions Settings`.
 
-A custom category can be designated as a parent category or a child category. If the category is a child category, you will need to specify its parent.
+A custom category can be a parent or a child; if it's a child category, specify its parent.
 
-### Assigning Categories
+### Assigning categories
 
-Now that you have the necesary categories, you can start assigning categories to your transactions.
+With the necessary categories in place, assign categories to your transactions.
 
-#### Manually Assinging Categories
+#### Manually assigning categories
 
-You can manually categorize transactions by navigating to the Transactions page and clicking on the transaction to edit it. Select the category drop-down to assign a category to the transaction.
+Manually categorize a transaction by navigating to the Transactions page, opening the transaction, and selecting a category from the drop-down.
 
-#### Automatic Rules
+#### Automatic rules
 
-If you would like to automatically categorize your transactions, you can create rules that will apply a category to transactions that match a given set of conditions.
+To automatically categorize transactions, create rules that apply a category when a transaction matches specified conditions.
 
-Navigate to the Transactions page and select the gear icon in the top right corner to bring up the `Transactions Settings` screen. Rules can be created under the Automatic Rules section. These rules will be applied when a sync is performed.
+Open `Transactions Settings` (gear icon on the Transactions page) and add rules under the Automatic Rules section. Rules are applied during sync.
 
 :::tip
-Automatic rules are helpful for reoccuring transactions that will always have the same category. For example, paying monthly utilities or rent.
+Automatic rules are helpful for recurring transactions that always use the same category, for example monthly utilities or rent.
 :::
 
-## Create Budgets
+## Create budgets
 
 TODO
 
-## Set Goals
+## Set goals
 
 TODO
