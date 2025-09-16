@@ -26,7 +26,7 @@ Then click `Sync` in the top-right corner to import your accounts.
 
 Navigate to the `Accounts Configuration` screen by clicking the gear button in the Accounts card on the Dashboard.
 
-Click the `Create Account` button and fill out the dialog to create the account.
+Click the `Create Account` button and fill out the dialog.
 
 Fill out each field for the account:
 
@@ -63,7 +63,7 @@ Useful for one-off transactions, such as a single cash purchase.
 
 Now that your accounts have transactions, you'll need to categorize them.
 
-### Category Hierarchy
+### Category hierarchy
 
 Categories in Budget Board are structured with parent categories representing broad areas of spending (for example: Shopping, Entertainment, Food & Dining).
 
@@ -83,7 +83,7 @@ With the necessary categories in place, assign categories to your transactions.
 
 #### Manually assigning categories
 
-Manually categorize a transaction by navigating to the Transactions page, opening the transaction, and selecting a category from the drop-down.
+Manually categorize a transaction by navigating to the Transactions page, opening the transaction, and selecting a category from the drop-down menu.
 
 #### Automatic rules
 
@@ -92,7 +92,7 @@ To automatically categorize transactions, create rules that apply a category whe
 Open `Transactions Settings` (gear icon on the Transactions page) and add rules under the Automatic Rules section. Rules are applied during sync.
 
 :::tip
-Automatic rules are helpful for recurring transactions that always use the same category, for example monthly utilities or rent.
+Automatic rules are helpful for recurring transactions that always use the same category, for example, monthly utilities or rent.
 :::
 
 ## Create budgets
