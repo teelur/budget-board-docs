@@ -1,0 +1,78 @@
+# Accounts
+
+Accounts represent your financial accounts, such as bank accounts, credit cards, cash, etc. You can create and manage accounts on the `Accounts` page (click the bank icon on the sidebar).
+
+## Account structure
+
+Accounts are grouped by Institution. An Institution represents the financial institution that holds your accounts, such as a bank or credit union.
+
+## Creating accounts
+
+To create a new account, click on the plus icon on the top right of the `Accounts` page. Fill out the form with the account details:
+
+- **Institution**: Specify either an existing institution or create a new one by typing the name and pressing Enter.
+- **Account Name**: The name of the account (e.g., "Checking", "Savings", "Credit Card").
+
+:::note
+If you are syncing information from SimpleFIN, you will not need to manually create accounts here, as they will be created automatically during the sync process. You only need to create accounts manually if you are importing transactions via CSV or adding transactions manually.
+:::
+
+## Reordering
+
+You can change the order in which accounts are displayed both on the `Accounts` page and in the `Accounts` card on the dashboard. To reorder accounts, click the `Reorder` button in the top right, then drag and drop accounts to your desired order using the provided buttons. Click `Save` when finished.
+
+:::tip
+You can reorder institutions as well by dragging and dropping them in the same way.
+:::
+
+## Editing
+
+To edit an account or institution, click the edit button (pencil icon) next to the account or institution name. Make your changes in the form that appears.
+
+### Institutions
+
+For institutions, you can change the name.
+
+### Accounts
+
+#### Name
+
+This is the display name of the account.
+
+#### Interest Rate
+
+If this account earns interest (i.e., a savings account or loan), you can specify the interest rate here. This will be used to better calculate your targets for goals.
+
+#### Account Type
+
+The account type helps categorize your accounts for better reporting and insights. For example it helps differentiate between asset accounts (like checking and savings) and liability accounts (like credit cards and loans).
+
+#### Hide Account
+
+If you want to hide an account from the dashboard and reports, you can enable this option. This is useful for accounts that you don't want to include in your overall financial picture, such as a closed account or an account used for specific purposes. This will retain all of the historical data for the account.
+
+#### Hide Transactions
+
+If you want to hide the transactions for an account from the transactions list, you can enable this option. This is useful for accounts that you don't want to see in your transaction list.
+
+This is useful for accounts that you don't want to include in your spending metrics, such as a loan. The outflows for this loan will be captured from other accounts (e.g., your checking account), so including the transactions from the loan account would double count your spending.
+
+#### Delete Account
+
+The red button on the far right will delete the account with the option to also delete all transactions associated with the account. The account can be restored later using the restore button in the same place, but transactions will have to be restored individually from the `Transactions` page.
+
+## Account details
+
+Clicking on an account will bring up the account details page, where you can see more details about the balance activity of the account.
+
+### Add balance
+
+This section will allow you to manually update the balance of the account.
+
+### Account trends
+
+This section shows a chart of the account balance over time.
+
+### Recent balances
+
+This section shows a list of recent balance updates for the account. Balance updates are performed automatically when syncing with SimpleFIN or importing transactions via CSV, but can also be done manually using the `Add balance` section above.

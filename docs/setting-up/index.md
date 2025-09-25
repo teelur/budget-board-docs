@@ -24,16 +24,7 @@ Then click `Sync` in the top-right corner to import your accounts.
 
 ### Manually create accounts
 
-Navigate to the `Accounts Configuration` screen by clicking the gear button in the Accounts card on the Dashboard.
-
-Click the `Create Account` button and fill out the dialog.
-
-Fill out each field for the account:
-
-- **Category**: The type of account. Used to group account balances during calculations.
-- **Interest Rate**: The interest rate of the account. Used for goal completion predictions.
-- **Hide Account**: Visually hide the account. Useful if you don't want to delete the account.
-- **Hide Transactions**: Hide transactions associated with the account. Useful for accounts (for example, savings or loans) where you only care about the balance.
+See the [Accounts](../features/accounts#creating-accounts) page for more details.
 
 ## Add transactions
 

@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Features",
-      items: ["features/importing-data"],
+      items: ["features/importing-data", "features/accounts"],
     },
   ],
 };
