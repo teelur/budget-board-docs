@@ -1,3 +1,65 @@
 # Goals
 
-TODO
+Budget Board allows you to set financial goals and track your progress toward them. Goals can be based on a target amount or a target date.
+
+Manage goals on the `Goals` page (click the flag icon in the sidebar).
+
+## Creating goals
+
+To create a new goal, click the plus icon in the top-right of the `Goals` page. Fill out the form with the goal details.
+
+### Goal types
+
+Goals can be one of two types:
+
+- **Savings**: Set a target amount you want to save.
+- **Debt payoff**: Set a target amount you want to pay off.
+
+### Goal details
+
+Fill out the following required fields:
+
+- **Name**: Enter a name for the goal.
+- **Accounts**: Select one or more accounts to associate with the goal. The balances of these accounts are used to track progress toward the goal.
+- **Target amount**: Specify the amount you want to save or pay off.
+  - For debt payoff goals, this is typically the remaining balance (often zero).
+- **Apply existing balance toward goal**: If enabled, the current balance of the selected accounts will be applied toward the goal immediately upon creation.
+  - Useful for existing savings you want included in the goal.
+
+### Goal options
+
+A goal can be configured with either a specific target date or a monthly contribution target. Specifying one will calculate the other based on your current progress.
+
+## Tracking progress
+
+Goals show progress as a percentage of the target amount. You can view progress over time and see how close you are to reaching the goal.
+
+### Include interest
+
+By default, goals do not account for interest earned on accounts associated with the goal. To include interest in goal calculations, enable the `Include interest` option (button in the top-right). This uses the interest rates specified on the `Accounts` page to project future balances and adjust the target date or monthly contribution accordingly.
+
+## Editing goals
+
+To edit a goal, click the edit button (pencil icon) next to the goal name and make changes in the form that appears.
+
+:::note
+You can only edit the target type that was set during goal creation (either target date or monthly contribution). The other value is always calculated.
+:::
+
+## Goal details
+
+Click a goal to open a side panel with more information.
+
+### Accounts
+
+View details about the accounts associated with the goal, including current balance and last balance date.
+
+### Goal trends
+
+View a chart of your goal progress over time, broken down by account. The chart can be set to 3-, 6-, or 12-month views.
+
+## Completing goals
+
+When you reach your goal, mark it complete by clicking the `Mark as Complete` button in the top-right of the goal details panel. Goals are also marked complete automatically during sync if the balances of the associated accounts reach the target amount.
+
+Completed goals appear in the `Completed` section at the bottom of the `Goals` page.
