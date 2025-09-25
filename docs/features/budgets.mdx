@@ -1,0 +1,99 @@
+# Budgets
+
+Budgets allow you to set targets for your different transaction categories, and track your progress toward those targets over the month.
+
+You can manage your budgets by navigating to the `Budgets` page (click the calculator icon in the sidebar).
+
+## Creating budgets
+
+To create a new budget, click on the plus icon on the top right of the `Budgets` page. Fill out the form with the budget details:
+
+- **Category**: Select the transaction category you want to set a budget for.
+  - You can create budgets for both parent and child categories.
+  - Child category budgets will be tracked separately from their parent category and will roll into the parent category's total.
+- **Amount**: Specify the target amount for the budget.
+
+## Tracking progress
+
+### Budget types
+
+Budgets can be of two types:
+
+- **Income**: These budgets track your income for the month. The goal is to meet or exceed the specified amount.
+  - All budgets attached to income categories will be treated as income budgets.
+- **Expense**: These budgets track your expenses in the selected category. The goal is to stay under the specified amount.
+  - All budgets attached to non-income categories will be treated as expense budgets.
+
+### Budget colors
+
+Budgets are color-coded based on your progress. The colors are different for income and expense budgets.
+
+#### Income budgets
+
+- **Green**: You have met or exceeded your income target.
+- **Blue**: You haven't yet met your income target.
+
+#### Expense budgets
+
+- **Green**: You are well below your expense target.
+- **Yellow**: You are approaching your expense target. The threshold for this color is configurable in the settings (See below).
+- **Red**: You have exceeded your expense target.
+
+#### Unbudgeted categories
+
+If you have transactions in a category that does not have a budget, it will be shown in one of two places.
+
+:::tip
+You can create budgets for these categories by clicking the plus icon on the unbudgeted category. This will create a new budget for the category with an initial amount of the current spending.
+:::
+
+#### Unbudgeted parent categories
+
+If the category is a parent category or a child category with no parent budget, it will be shown in the `Unbudgeted` section at the bottom of the budgets list.
+
+#### Unbudgeted child categories
+
+If the category is a child category with a parent budget, it will be shown under the parent category in the budgets list.
+
+## Budget settings
+
+You can configure some settings for budgets by clicking the gear icon on the top right of the `Budgets` page.
+
+### Warning threshold
+
+This setting controls the threshold at which a expense budget changes from green to yellow. For example, if the threshold is set to 80%, an expense budget will turn yellow when you have spent 80% of the budgeted amount.
+
+## Budget summary
+
+At the top of the right column on the `Budgets` page, you will see a summary of your budgets for the month. This includes:
+
+- **Total Income**: The total progress of income budgets for the month.
+- **Total Expenses**: The total progress of expense budgets for the month.
+- **Unbudgeted**: The total of all unbudgeted expenses for the month as compared to the total unbudgeted income for the month (i.e. Income budgets - Expense budgets).
+- **Net Cash Flow**: The net cash flow for the month, calculated as Total Income - Total Expenses + Unbudgeted.
+
+## Aggregating budgets
+
+By default, the budgets page will show budgets for the current month. You can change this to show budgets for a different month or to aggregate budgets over multiple months.
+
+To change the selected month, use the toolbar at the top of the `Budgets` page.
+
+To select multiple months, click the `Select Multiple` button in the toolbar. Then, click on the months you want to include in the aggregation. Click the button again to return to single month view.
+
+:::note
+When aggregating over multiple months, you will not be able to edit/add budgets or view budget details.
+:::
+
+## Budget details
+
+To view the details of a budget, click on the budget in the list. This will open a side panel with more information about the budget.
+
+### Expense trends
+
+This section shows a bar chart of your expenses in the selected category over the past 6 months. It will also display an average spending over this time period. This can help you see trends in your spending and adjust your budget accordingly.
+
+### Recent transactions
+
+This section shows a list of recent transactions in the selected category. This can help you see where your money is going and identify any unexpected expenses.
+
+You can edit transactions from this panel just as you would on the `Transactions` page.

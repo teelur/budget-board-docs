@@ -88,7 +88,9 @@ Automatic rules are helpful for recurring transactions that always use the same 
 
 ## Create budgets
 
-TODO
+Once you have some account and transaction data populated, you can start setting income and expense targets.
+
+See the [Budgets](../features/budgets.mdx) page for more details.
 
 ## Set goals
 
