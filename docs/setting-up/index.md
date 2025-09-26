@@ -2,58 +2,43 @@
 
 ## Create your login
 
-When you first connect to Budget Board, create a login account by selecting `Register Here` at the bottom of the login box.
+When you first connect to Budget Board, create an account by selecting `Register Here` at the bottom of the login box.
 
 :::note
-If you configured an email sender in your compose file, check your email for a confirmation link before you can log in.
+If you've configured an email sender in your compose file, check your email for a confirmation link before you can log in.
 :::
 
 ## Add accounts
 
-With your newly created login, the first thing you should do is set up all accounts you wish to track. This can be done in a few different ways.
+After creating your login, set up the accounts you want to track. You can add accounts in several ways.
 
 ### Sync via SimpleFIN
 
-You can automatically sync your accounts with a service called [SimpleFIN Bridge](https://beta-bridge.simplefin.org/).
+You can automatically sync accounts using SimpleFIN Bridge: https://beta-bridge.simplefin.org/.
 
-After you set up your SimpleFIN account, click the `New Connection` button to generate an access token.
+In SimpleFIN, click the `New Connection` button to generate an access token. Then paste that token into the `Link SimpleFIN` section on Budget Board's Settings page and click `Save Changes`. If successful, the section will show `Linked`.
 
-Once you have an access token, navigate to the Settings page in Budget Board and paste it into the `Link SimpleFIN` section. Click `Save Changes`. If successful, the section will be marked `Linked`.
-
-Then click `Sync` in the top-right corner to import your accounts.
+Finally, click `Sync` in the top-right to import your accounts.
 
 ### Manually create accounts
 
-Navigate to the `Accounts Configuration` screen by clicking the gear button in the Accounts card on the Dashboard.
-
-Click the `Create Account` button and fill out the dialog.
-
-Fill out each field for the account:
-
-- **Category**: The type of account. Used to group account balances during calculations.
-- **Interest Rate**: The interest rate of the account. Used for goal completion predictions.
-- **Hide Account**: Visually hide the account. Useful if you don't want to delete the account.
-- **Hide Transactions**: Hide transactions associated with the account. Useful for accounts (for example, savings or loans) where you only care about the balance.
+See the [Accounts](../features/accounts#creating-accounts) page for details.
 
 ## Add transactions
 
-Now that your accounts exist, you can add transactions.
+Now that your accounts exist, add transactions.
 
 ### Sync via SimpleFIN
 
-If you set up SimpleFIN as described above, transactions will be added automatically to their respective accounts when you run a sync.
+If you've linked SimpleFIN, transactions are imported automatically when you run a sync.
 
 ### Import via CSV
 
-If you have many transactions to add, use a CSV file to import them in bulk.
-
-See [Import via CSV](features/importing-data#import-via-csv) for details.
+For bulk imports, use a CSV file. See [Import via CSV](../features/importing-data#import-via-csv) for details.
 
 ### Manually create transactions
 
-Create transactions manually by navigating to the Transactions page and clicking the `+` button in the top-right corner.
-
-Fill out the required fields and click `Submit` to create the transaction.
+Create transactions manually on the Transactions page by clicking the `+` button in the top-right. Fill out the required fields and click `Submit`.
 
 :::tip
 Useful for one-off transactions, such as a single cash purchase.
@@ -61,44 +46,34 @@ Useful for one-off transactions, such as a single cash purchase.
 
 ## Categorize transactions
 
-Now that your accounts have transactions, you'll need to categorize them.
+With transactions added, assign categories.
 
 ### Category hierarchy
 
-Categories in Budget Board are structured with parent categories representing broad areas of spending (for example: Shopping, Entertainment, Food & Dining).
-
-Each parent category can have child categories to break spending into more specific areas. For example, the Food & Dining parent category includes child categories such as Alcohol & Bars, Coffee Shops, Food Delivery, Groceries, and Restaurants.
+Categories are organized as parents (broad areas, e.g., Food & Dining) and children (more specific, e.g., Groceries, Restaurants).
 
 ### Custom categories
 
-Budget Board provides a default set of transaction categories to get you started.
-
-If you need additional categories, create custom categories on the Transactions page by clicking the gear button in the top-right corner to open `Transactions Settings`.
-
-A custom category can be a parent or a child; if it's a child category, specify its parent.
+Budget Board includes default categories. To add custom categories, open `Transactions Settings` (gear icon on the Transactions page). A custom category can be a parent or a child—if it’s a child, specify its parent.
 
 ### Assigning categories
 
-With the necessary categories in place, assign categories to your transactions.
+#### Manually
 
-#### Manually assigning categories
-
-Manually categorize a transaction by navigating to the Transactions page, opening the transaction, and selecting a category from the drop-down menu.
+Open a transaction on the Transactions page and select a category from the dropdown.
 
 #### Automatic rules
 
-To automatically categorize transactions, create rules that apply a category when a transaction matches specified conditions.
-
-Open `Transactions Settings` (gear icon on the Transactions page) and add rules under the Automatic Rules section. Rules are applied during sync.
+Create rules in `Transactions Settings` under Automatic Rules to categorize transactions based on conditions. Rules are applied during sync.
 
 :::tip
-Automatic rules are helpful for recurring transactions that always use the same category, for example, monthly utilities or rent.
+Automatic rules are helpful for recurring transactions that always use the same category (for example, monthly utilities or rent).
 :::
 
 ## Create budgets
 
-TODO
+After you have account and transaction data, set income and expense targets. See the [Budgets](../features/budgets.mdx) page for details.
 
 ## Set goals
 
-TODO
+Create goals to track savings targets or paying off debt. See the [Goals](../features/goals.mdx) page for details.

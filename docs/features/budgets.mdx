@@ -1,0 +1,97 @@
+# Budgets
+
+Budgets let you set targets for transaction categories and track progress toward those targets over the month.
+
+Manage budgets on the `Budgets` page (click the calculator icon in the sidebar).
+
+## Creating budgets
+
+To create a new budget, click the plus icon in the top-right of the `Budgets` page. Fill out the form with the budget details:
+
+- **Category**: Select the transaction category to budget.
+  - You can create budgets for parent and child categories.
+  - Child-category budgets are tracked separately and roll up into the parent category's total.
+- **Amount**: Specify the target amount for the budget.
+
+## Tracking progress
+
+### Budget types
+
+Budgets are one of two types:
+
+- **Income**: Tracks income for the month. The goal is to meet or exceed the amount.
+  - Budgets attached to income categories are treated as income budgets.
+- **Expense**: Tracks expenses in the selected category. The goal is to stay under the specified amount.
+  - Budgets attached to non-income categories are treated as expense budgets.
+
+### Budget colors
+
+Budgets are color-coded by progress. Colors differ for income and expense budgets.
+
+#### Income budgets
+
+- **Green**: You have met or exceeded the income target.
+- **Blue**: You have not yet met the income target.
+
+#### Expense budgets
+
+- **Green**: You are well below the expense target.
+- **Yellow**: You are approaching the expense target. The threshold for this color is configurable in settings (see below).
+- **Red**: You have exceeded the expense target.
+
+#### Unbudgeted categories
+
+Transactions in categories without a budget appear in one of two places.
+
+:::tip
+Create a budget for an unbudgeted category by clicking the plus icon next to it. This creates a new budget prefilled with the current spending as the initial amount.
+:::
+
+#### Unbudgeted parent categories
+
+If the category is a parent, or a child with no parent budget, it appears in the `Unbudgeted` section at the bottom of the budgets list.
+
+#### Unbudgeted child categories
+
+If the category is a child and its parent has a budget, it appears under the parent category in the budgets list.
+
+## Budget settings
+
+Configure budget settings by clicking the gear icon in the top-right of the `Budgets` page.
+
+### Warning threshold
+
+This setting controls when an expense budget changes from green to yellow. For example, if the threshold is 80%, an expense budget turns yellow when you reach 80% of the budgeted amount.
+
+## Budget summary
+
+At the top of the right column on the `Budgets` page, you'll see a summary for the month:
+
+- **Total Income**: Combined progress of income budgets for the month.
+- **Total Expenses**: Combined progress of expense budgets for the month.
+- **Unbudgeted**: Net unbudgeted amount (unbudgeted income minus unbudgeted expenses).
+- **Net Cash Flow**: Calculated as Total Income - Total Expenses + Unbudgeted.
+
+## Aggregating budgets
+
+By default the Budgets page shows the current month. You can view a different month or aggregate multiple months.
+
+Change the selected month using the toolbar at the top of the `Budgets` page.
+
+To select multiple months, click the `Select Multiple` button in the toolbar, then click the months to include. Click the button again to return to single-month view.
+
+:::note
+When aggregating multiple months you cannot add/edit budgets or view budget details.
+:::
+
+## Budget details
+
+Click a budget to open a side panel with more information.
+
+### Expense trends
+
+Shows a bar chart of expenses in the selected category over the past six months and an average for that period.
+
+### Recent transactions
+
+Lists recent transactions in the category. You can edit transactions from this panel just as on the `Transactions` page.
