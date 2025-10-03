@@ -1,0 +1,40 @@
+# SimpleFIN Sync
+
+Budget Board can sync with [SimpleFIN](https://simplefin.com/), a third‑party service that connects to your bank and imports transactions.
+
+## Getting Started
+
+### Setting up SimpleFIN
+
+To use SimpleFIN with Budget Board, set up a [SimpleFIN Bridge](https://beta-bridge.simplefin.org/) account. This service securely connects to your bank and provides access tokens for third‑party applications like Budget Board.
+
+1. Go to [SimpleFIN Bridge](https://beta-bridge.simplefin.org/) and create an account.
+2. After logging in, connect your bank account by following the prompts in SimpleFIN.
+3. In SimpleFIN, click the "New Connection" button under "Apps" to generate an access token.
+4. Copy the generated access token.
+
+### Linking SimpleFIN to Budget Board
+
+Use the access token to link SimpleFIN to Budget Board:
+
+1. In Budget Board, open the Settings page.
+2. Find the "Link SimpleFIN" section.
+3. Paste the access token from SimpleFIN Bridge into the input field.
+4. Click "Save Changes". If successful, the section will display "Linked".
+
+## Advanced Configuration
+
+### Force Sync Lookback Period
+
+By default, Budget Board determines the lookback period used when requesting transactions from SimpleFIN. You can override this and specify a custom lookback period (in days) to re‑import older transactions.
+
+To change the lookback period:
+
+1. In Budget Board, open the Settings page.
+2. Under Advanced Settings, find the "Force Sync Lookback Period" field.
+3. Choose the desired lookback period from the dropdown.
+4. Run a sync to apply the new lookback period.
+
+:::note
+Larger lookback periods take longer to sync because more transactions must be fetched and processed. It is recommended to use the default setting unless you need a longer history.
+:::

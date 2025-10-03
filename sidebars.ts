@@ -29,7 +29,14 @@ const sidebars: SidebarsConfig = {
       type: "category",
       label: "Features",
       items: [
-        "features/importing-data",
+        {
+          type: "category",
+          label: "Importing Data",
+          items: [
+            "features/importing-data/simplefin-sync",
+            "features/importing-data/csv-import",
+          ],
+        },
         "features/accounts",
         "features/budgets",
         "features/goals",
