@@ -14,11 +14,7 @@ After creating your login, set up the accounts you want to track. You can add ac
 
 ### Sync via SimpleFIN
 
-You can automatically sync accounts using SimpleFIN Bridge: https://beta-bridge.simplefin.org/.
-
-In SimpleFIN, click the `New Connection` button to generate an access token. Then paste that token into the `Link SimpleFIN` section on Budget Board's Settings page and click `Save Changes`. If successful, the section will show `Linked`.
-
-Finally, click `Sync` in the top-right to import your accounts.
+See the [SimpleFIN Sync](../features/importing-data/simplefin-sync#getting-started) page for more details.
 
 ### Manually create accounts
 
