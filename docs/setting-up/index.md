@@ -30,7 +30,7 @@ If you've linked SimpleFIN, transactions are imported automatically when you run
 
 ### Import via CSV
 
-For bulk imports, use a CSV file. See [Import via CSV](../features/importing-data#import-via-csv) for details.
+For bulk imports, use a CSV file. See [Import via CSV](../features/importing-data/csv-import) for details.
 
 ### Manually create transactions
 
