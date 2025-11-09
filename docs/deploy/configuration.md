@@ -19,8 +19,10 @@ The following settings apply to the server component of Budget Board.
 | POSTGRES_PASSWORD     | The database user's password. This should match the variable of the same name under the `budget-board-db` container.                                                       |
 | AUTO_UPDATE_DB        | When `true`, the database will be automatically migrated when the schema changes. Otherwise, you'll need to update it manually.                                            |
 | EMAIL_SENDER          | The email address used to send verification and password-reset emails. See Additional Details for more information about configuring this.                                 |
-| EMAIL_SENDER_PASSWORD | The password for the email account used to send verification and password-reset emails.                                                                                    |
+| EMAIL_SENDER_USERNAME | The username for the SMTP server used to send verification and password-reset emails. If not specified, this defaults to the EMAIL_SENDER value.                           |
+| EMAIL_SENDER_PASSWORD | The password for the SMTP server used to send verification and password-reset emails.                                                                                      |
 | EMAIL_SMTP_HOST       | The SMTP host used to send email.                                                                                                                                          |
+| EMAIL_SMTP_PORT       | The port for the SMTP server.                                                                                                                                              |
 | DISABLE_AUTO_SYNC     | Set to `true` to disable the SimpleFIN auto-sync feature.                                                                                                                  |
 
 ### Configuring the email sender
