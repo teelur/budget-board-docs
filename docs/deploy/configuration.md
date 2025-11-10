@@ -25,7 +25,7 @@ The following settings apply to the server component of Budget Board.
 | EMAIL_SMTP_PORT       | The port for the SMTP server.                                                                                                                                              |
 | DISABLE_AUTO_SYNC     | Set to `true` to disable the SimpleFIN auto-sync feature.                                                                                                                  |
 | DISABLE_AUTO_SYNC     | Set this to disable automatic syncs.                                                                                                                                       |
-| SYNC_INTERVAL_HOURS   | The number of hours between automatic syncs.                                                                                                                               |
+| SYNC_INTERVAL_HOURS   | The number of hours between automatic syncs. If not specified, this defaults to 8 hours.                                                                                   |
 
 ### Configuring the email sender
 
