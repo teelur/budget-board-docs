@@ -38,6 +38,7 @@ const sidebars: SidebarsConfig = {
           ],
         },
         "features/accounts",
+        "features/assets",
         "features/budgets",
         "features/goals",
       ],
