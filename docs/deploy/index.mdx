@@ -14,17 +14,17 @@ Ensure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compos
 On macOS or Linux, you can download the compose files with:
 
 ```bash
-curl -O https://raw.githubusercontent.com/your-repo/compose.yml && curl -O https://raw.githubusercontent.com/your-repo/compose.override.yml
+curl -O https://raw.githubusercontent.com/your-repo/compose.yml && curl -O https://raw.githubusercontent.com/your-repo/compose.env
 ```
 
 On Windows (PowerShell), use:
 
 ```powershell
 Invoke-WebRequest -OutFile compose.yml https://raw.githubusercontent.com/your-repo/compose.yml
-Invoke-WebRequest -OutFile compose.override.yml https://raw.githubusercontent.com/your-repo/compose.override.yml
+Invoke-WebRequest -OutFile compose.env https://raw.githubusercontent.com/your-repo/compose.env
 ```
 
-`compose.yml` contains the base configuration; `compose.override.yml` contains variables you should edit.
+`compose.yml` contains the base configuration; `compose.env` contains variables you should edit.
 
 ```mdx-code-block
 import ComposeFiles from "@site/src/components/ComposeFiles";
@@ -32,9 +32,9 @@ import ComposeFiles from "@site/src/components/ComposeFiles";
 <ComposeFiles />
 ```
 
-### Edit the variables in `compose.override.yml`
+### Edit the variables in `compose.env`
 
-For a quick demo the compose files work out of the box. For production, edit the variables in `compose.override.yml` to suit your environment.
+For a quick demo the compose files work out of the box. For production, edit the variables in `compose.env` to suit your environment.
 
 It's strongly recommended to change the default passwords and to configure email settings for account verification and password recovery. See [Configuration](configuration.md) for details.
 
