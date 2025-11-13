@@ -2,10 +2,10 @@
 
 ## Create your login
 
-When you first connect to Budget Board, create an account by selecting `Register Here` at the bottom of the login box.
+When you first connect to Budget Board, create an account by clicking `Register Here` at the bottom of the login box.
 
 :::note
-If you've configured an email sender in your compose file, check your email for a confirmation link before you can log in.
+If you've configured an email sender in your compose file, check your email for a confirmation link before logging in.
 :::
 
 ## Add accounts
