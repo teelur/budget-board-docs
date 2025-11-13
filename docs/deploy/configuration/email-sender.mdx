@@ -1,0 +1,11 @@
+# Email Sender
+
+The env file contains settings to configure an email sender for password resets and account verification. This is optional but highly recommended for deployments that don't use OIDC.
+
+You will need an SMTP server to send email. You can use a self-hosted service, a paid cloud service, or a provider such as Gmail for small deployments.
+
+If you plan to use Gmail, consult Google's documentation for enabling SMTP access and generating app-specific credentials where required.
+
+:::warning
+If you don't configure an SMTP server, users have no convenient way to recover a lost password. You would need to edit the database directly to set a new hashed password.
+:::

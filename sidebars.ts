@@ -18,7 +18,18 @@ const sidebars: SidebarsConfig = {
       type: "category",
       label: "Deploy",
       link: { type: "doc", id: "deploy/index" },
-      items: ["deploy/configuration", "deploy/versions"],
+      items: [
+        {
+          type: "category",
+          label: "Configuration",
+          link: { type: "doc", id: "deploy/configuration/index" },
+          items: [
+            "deploy/configuration/email-sender",
+            "deploy/configuration/oidc-authentication",
+          ],
+        },
+        "deploy/versions",
+      ],
     },
     {
       type: "doc",
