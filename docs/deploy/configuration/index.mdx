@@ -6,24 +6,26 @@ sidebar_position: 2
 
 The included `compose.yml` and `compose.env` files in the repo contain default values that allow you to quickly demo the app.
 
-If you plan to use the app long term, you can customize your deployment using the following values in `compose.env`.
+If you plan to use the app long-term, you can customize your deployment using the following values in `compose.env`.
 
 ### Client Configuration
 
 These values are critical to the function of the `budget-board-client` container.
 
-| Option | Details                                                                   |
-| ------ | ------------------------------------------------------------------------- |
-| `PORT` | This is the port on which you will access Budget Board from your browser. |
+| Option            | Details                                                                                                           |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `VITE_API_URL`    | This is the URL you use to access Budget Board. (e.g. `localhost:6253` or `budget-board.example.com`)             |
+| `VITE_SERVER_URL` | This is the address of your `budget-board-server` container. You shouldn't need to set this environment variable. |
+| `PORT`            | This is the port on which you will access Budget Board from your browser.                                         |
 
 ### Server Configuration
 
 These values are critical to the function of the `budget-board-server` container.
 
-| Option                       | Details                                                                                                 |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `CLIENT_URL`                 | This is the address of your `budget-board-client` container. You should not need to modify this option. |
-| `Logging__LogLevel__Default` | The logging level of the server. By default this is set to the most verbose level.                      |
+| Option       | Details                                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------- |
+| `CLIENT_URL` | This is the address of your `budget-board-client` container. You should not need to modify this option. |
+| `LOG_LEVEL`  | The logging level of the server. By default this is set to the most verbose level.                      |
 
 ### Database Configuration
 
@@ -75,6 +77,6 @@ These settings allow you to customize the behavior of the Budget Board server.
 
 | Option                | Details                                                                                  |
 | --------------------- | ---------------------------------------------------------------------------------------- |
-| `AUTO_UPDATE_DB`      | Set this to enable automatic database migrations when the server starts.                 |
-| `DISABLE_AUTO_SYNC`   | Set this to disable automatic syncs.                                                     |
+| `AUTO_UPDATE_DB`      | Set to `true` to enable automatic database migrations when the server starts.            |
+| `DISABLE_AUTO_SYNC`   | Set to `true` to disable automatic syncs.                                                |
 | `SYNC_INTERVAL_HOURS` | The number of hours between automatic syncs. If not specified, this defaults to 8 hours. |

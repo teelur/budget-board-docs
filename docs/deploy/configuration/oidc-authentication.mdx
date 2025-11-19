@@ -1,3 +1,45 @@
 # OIDC Authentication
 
-If you plan to use an OIDC provider for authentication instead of the built-in username/password system, you will need to configure the following settings in your `compose.env` file.
+Budget Board supports 3rd party authentication via OpenID Connect (OIDC). This allows you to use an external identity provider (IdP) for user authentication instead of the built-in username/password system.
+
+A good self-hosted example is [Pocket ID](https://pocket-id.org/).
+
+## Setting up OIDC Authentication
+
+### Configuring your OIDC Provider
+
+Exact configuration details will vary depending on your OIDC provider. Generally, you will need to:
+
+1. Create a new application/client in your OIDC provider's dashboard.
+2. Set the redirect URI to your application's callback endpoint.
+   - For Budget Board use: `http://{yourDomain}/oidc-callback`
+   - `{yourDomain}` should be replaced with the domain name or the IP address and port you use to access Budget Board (e.g., `localhost:6253` by default).
+3. Make a note of the Client ID and Client Secret provided by your OIDC provider.
+
+### Application Configuration
+
+Once you have your OIDC provider set up, you need to configure your Budget Board application to use it. You will need to set the environment variables in the `compose.env` file as defined in [OIDC Configuration](../configuration#oidc-configuration).
+
+## Using OIDC Authentication
+
+When OIDC authentication is enabled, users will see an option to log in via the configured OIDC provider on the login page. Clicking this option will redirect them to the OIDC provider's login page. After successful authentication, users will be redirected back to Budget Board.
+
+### Connecting OIDC
+
+If you wish to add OIDC authentication to a Budget Board account, follow these steps.
+
+#### New users
+
+When a user logs in via OIDC for the first time, a new account will be created for them in Budget Board using the information provided by the OIDC provider (e.g., email address, name).
+
+#### Existing users
+
+If a user already has an account in Budget Board with the same email address as provided by the OIDC provider, they will be linked to that existing account upon logging in via OIDC.
+
+### Disconnecting OIDC
+
+If you wish to disconnect your OIDC account from your local Budget Board account, you can do so from the `Settings` page after logging in. This will revert your account back to using the built-in username/password authentication method.
+
+:::note
+If you disconnect OIDC and do not have a local password set, you will first need to set a password via the `Create Password` section in the `Settings` page.
+:::
