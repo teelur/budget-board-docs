@@ -26,6 +26,13 @@ const sidebars: SidebarsConfig = {
           items: [
             "deploy/configuration/email-sender",
             "deploy/configuration/oidc-authentication",
+            {
+              type: "category",
+              label: "Migration Guides",
+              items: [
+                "deploy/configuration/migration-guides/v2.x-to-v3.x-migration",
+              ],
+            },
           ],
         },
         "deploy/versions",
