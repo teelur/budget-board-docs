@@ -14,14 +14,14 @@ Ensure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compos
 On macOS or Linux, you can download the compose files with:
 
 ```bash
-curl -O https://raw.githubusercontent.com/your-repo/compose.yml && curl -O https://raw.githubusercontent.com/your-repo/compose.env
+curl -O https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.yml && curl -O https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.env
 ```
 
 On Windows (PowerShell), use:
 
 ```powershell
-Invoke-WebRequest -OutFile compose.yml https://raw.githubusercontent.com/your-repo/compose.yml
-Invoke-WebRequest -OutFile compose.env https://raw.githubusercontent.com/your-repo/compose.env
+Invoke-WebRequest -OutFile compose.yml https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.yml
+Invoke-WebRequest -OutFile compose.env https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.env
 ```
 
 `compose.yml` contains the base configuration; `compose.env` contains variables you should edit.
@@ -43,7 +43,7 @@ It's strongly recommended to change the default passwords and to configure email
 Run the following command to start the services in detached mode:
 
 ```bash
-docker compose up -d
+docker compose --env-file compose.env up -d
 ```
 
 ### Access
