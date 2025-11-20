@@ -11,10 +11,13 @@ A good self-hosted example is [Pocket ID](https://pocket-id.org/).
 Exact configuration details will vary depending on your OIDC provider. Generally, you will need to:
 
 1. Create a new application/client in your OIDC provider's dashboard.
-2. Set the redirect URI to your application's callback endpoint.
+2. If required:
+   1. Set the client type to `Confidential`.
+   2. Set the allowed grant types to include `Authorization Code`.
+3. Set the redirect URI to your application's callback endpoint.
    - For Budget Board use: `http://{yourDomain}/oidc-callback`
    - `{yourDomain}` should be replaced with the domain name or the IP address and port you use to access Budget Board (e.g., `localhost:6253` by default).
-3. Make a note of the Client ID and Client Secret provided by your OIDC provider.
+4. Make a note of the Client ID and Client Secret provided by your OIDC provider.
 
 ### Application Configuration
 
