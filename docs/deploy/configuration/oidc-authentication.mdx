@@ -1,12 +1,12 @@
-# OIDC Authentication
+# OIDC authentication
 
-Budget Board supports 3rd party authentication via OpenID Connect (OIDC). This allows you to use an external identity provider (IdP) for user authentication instead of the built-in username/password system.
+Budget Board supports third-party authentication via OpenID Connect (OIDC). This allows you to use an external identity provider (IdP) for user authentication instead of the built-in username/password system.
 
 A good self-hosted example is [Pocket ID](https://pocket-id.org/).
 
-## Setting up OIDC Authentication
+## Setting up OIDC authentication
 
-### Configuring your OIDC Provider
+### Configuring your OIDC provider
 
 Exact configuration details will vary depending on your OIDC provider. Generally, you will need to:
 
@@ -15,13 +15,13 @@ Exact configuration details will vary depending on your OIDC provider. Generally
    1. Set the client type to `Confidential`.
    2. Set the allowed grant types to include `Authorization Code`.
 3. Set the redirect URI to your application's callback endpoint.
-   - For Budget Board use: `http://{yourDomain}/oidc-callback`
-   - `{yourDomain}` should be replaced with the domain name or the IP address and port you use to access Budget Board (e.g., `localhost:6253` by default).
+   - For Budget Board, use: `http://{yourDomain}/oidc-callback`
+   - Replace `{yourDomain}` with the domain name or the IP address and port you use to access Budget Board (e.g., `localhost:6253` by default).
 4. Make a note of the Client ID and Client Secret provided by your OIDC provider.
 
 ### Application Configuration
 
-Once you have your OIDC provider set up, you need to configure your Budget Board application to use it. You will need to set the environment variables in the `compose.env` file as defined in [OIDC Configuration](../configuration#oidc-configuration).
+Once your OIDC provider is set up, configure your Budget Board application to use it. Set the environment variables in the `compose.env` file as defined in [OIDC Configuration](../configuration#oidc-configuration).
 
 ## Using OIDC Authentication
 
@@ -29,7 +29,7 @@ When OIDC authentication is enabled, users will see an option to log in via the 
 
 ### Connecting OIDC
 
-If you wish to add OIDC authentication to a Budget Board account, follow these steps.
+If you wish to add OIDC authentication to a Budget Board account, follow these steps:
 
 #### New users
 
