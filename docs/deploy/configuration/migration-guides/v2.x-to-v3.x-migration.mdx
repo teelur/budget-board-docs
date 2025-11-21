@@ -1,23 +1,31 @@
 # v2.x to v3.x Migration
 
-The compose files for Budget Board have changed between version 2 and version 3. This document outlines the changes you need to make to your compose files when migrating from v2.x to v3.x.
+The compose files for Budget Board have breaking changes that require migration between version 2 and version 3. See below for details on how to migrate your deployment.
+
+## Reasons for Breaking Changes
+
+Some environment variables are needed by both the client and the server containers, so having them in a `compose.env` file makes it easier to define a variable once and have it available to both containers. In the previous configuration, you would need to define the same variable for each container in `compose.override.yml`, which could lead to inconsistencies and errors.
 
 ## Compose File Format Changes
 
-In version 2, the `compose.override.yml` file contained custom environment variable settings. In version 3, these settings have been moved to the `compose.env` file.
+In version 2, the `compose.override.yml` file contained custom environment variable settings.
 
-When migrating, it is highly recommended to copy the v3.x `compose.env` file and transfer your custom environment variable settings from your old `compose.override.yml` file. Ensure that you update the variable names according to the changes outlined below.
+In version 3, these settings have been moved to the `compose.env` file.
+
+When migrating, it is highly recommended to copy the v3.x `compose.env` file and transfer your custom environment variable settings from your old `compose.override.yml` file. The default `compose.env` contains values that should work for most users, but you will need to update any values that you have modified for your deployment (e.g., passwords, connection strings, etc.).
+
+There were a few variables that have been renamed or added in v3.x, so be sure to review the list below.
 
 ## Summary of Environment Variable Changes
 
 In addition to the file format changes, a few new environment variables are now required, and some existing variables have been renamed.
 
-| v2 Variable                  | v3 Variable           | Notes                                                                                                   |
-| ---------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
-| `VITE_API_URL`               | `BUDGET_BOARD_DOMAIN` | This is the domain you use to access Budget Board (e.g., `localhost:6253` or `budgetboard.example.com`) |
-| N/A                          | `SERVER_ADDRESS`      | New variable, typically does not need to be changed                                                     |
-| `PORT`                       | `PORT`                | Remains unchanged; now defined in the `compose.env` file rather than `compose.yml`                      |
-| `CLIENT_URL`                 | `CLIENT_ADDRESS`      | Set to the same value as in v2                                                                          |
-| `Logging__LogLevel__Default` | `LOG_LEVEL`           | Set to the same value as in v2                                                                          |
+| v2 Variable                  | v3 Variable           | Notes                                                                                                                                                                                                                                               |
+| ---------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `VITE_API_URL`               | `BUDGET_BOARD_DOMAIN` | This variable was previously defined in `compose.yml`, but has been moved to `compose.env`. This is the domain you use to access Budget Board (e.g., `192.168.1.12:6253` or `budgetboard.example.com`)                                              |
+| N/A                          | `SERVER_ADDRESS`      | New variable. Can be left to its default value unless you have modified `compose.yml`.                                                                                                                                                              |
+| `PORT`                       | `PORT`                | This variable was previously defined in `compose.yml`, but has been moved to `compose.env`. This is the port that will be exposed on the Docker container. You only should need to change this if you do not want to use the default port of `6253` |
+| `CLIENT_URL`                 | `CLIENT_ADDRESS`      | This variable was previously defined in `compose.yml`, but has been moved to `compose.env`. Can be left to its default value unless you have modified `compose.yml`.                                                                                |
+| `Logging__LogLevel__Default` | `LOG_LEVEL`           | This variable was previously defined in `compose.yml`, but has been moved to `compose.env`. Can be left to its default value unless you want to change the logging level to be less verbose.                                                        |
 
 Make sure to update your deployment configurations accordingly to ensure a smooth transition from version 2 to version 3 of Budget Board.
