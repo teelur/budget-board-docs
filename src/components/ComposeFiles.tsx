@@ -14,7 +14,7 @@ const ComposeFiles = (): React.ReactNode => {
       <TabItem value="compose.env">
         <CodeFileBlock
           fileUrl="https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.env"
-          language="yml"
+          language="bash"
         />
       </TabItem>
     </Tabs>
