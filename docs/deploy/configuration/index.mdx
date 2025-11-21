@@ -1,0 +1,78 @@
+# Configuration
+
+The included `compose.yml` and `compose.env` files in the repo contain default values that allow you to quickly demo the app.
+
+If you plan to use the app long-term, you can customize your deployment using the following values in `compose.env`.
+
+### Client Configuration
+
+These values are critical to the function of the `budget-board-client` container.
+
+| Option                | Details                                                                                                        |
+| --------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `BUDGET_BOARD_DOMAIN` | This is the domain you use to access Budget Board. (e.g., `localhost:6253` or `budget-board.example.com`)       |
+| `SERVER_ADDRESS`      | This is the address of your `budget-board-server` container. The default value will work for most deployments. |
+| `PORT`                | This is the port on which you will access Budget Board.                                                        |
+
+### Server Configuration
+
+These values are critical to the function of the `budget-board-server` container.
+
+| Option           | Details                                                                                                        |
+| ---------------- | -------------------------------------------------------------------------------------------------------------- |
+| `CLIENT_ADDRESS` | This is the address of your `budget-board-client` container. The default value will work for most deployments. |
+| `LOG_LEVEL`      | The logging level of the server. By default this is set to the most verbose level.                             |
+
+### Database Configuration
+
+These values are critical to the function of the `budget-board-db` container.
+
+| Option              | Details                                                                             |
+| ------------------- | ----------------------------------------------------------------------------------- |
+| `POSTGRES_HOST`     | The host for the PostgreSQL database.                                               |
+| `POSTGRES_PORT`     | The port for the PostgreSQL database.                                               |
+| `POSTGRES_DATABASE` | The PostgreSQL database name.                                                       |
+| `POSTGRES_USER`     | The PostgreSQL database user that Budget Board will use to connect to the database. |
+| `POSTGRES_PASSWORD` | The database user's password.                                                       |
+
+### OIDC Configuration
+
+These values are required if you plan to use an OIDC provider for authentication instead of the built-in username/password system.
+
+| Option               | Details                                               |
+| -------------------- | ----------------------------------------------------- |
+| `OIDC_ENABLED`       | Set to `true` to enable OIDC authentication.          |
+| `OIDC_ISSUER`        | The URL of your OIDC provider.                        |
+| `OIDC_CLIENT_ID`     | The client ID registered with your OIDC provider.     |
+| `OIDC_CLIENT_SECRET` | The client secret registered with your OIDC provider. |
+
+### Email Configuration
+
+The following values are required if you plan to use email features such as password resets and account verification.
+
+| Option                  | Details                                                                                                                                          |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `EMAIL_SENDER`          | The email address used to send verification and password-reset emails.                                                                           |
+| `EMAIL_SENDER_USERNAME` | The username for the SMTP server used to send verification and password-reset emails. If not specified, this defaults to the EMAIL_SENDER value. |
+| `EMAIL_SENDER_PASSWORD` | The password for the SMTP server used to send verification and password-reset emails.                                                            |
+| `EMAIL_SMTP_HOST`       | The SMTP host used to send email.                                                                                                                |
+| `EMAIL_SMTP_PORT`       | The port for the SMTP server.                                                                                                                    |
+
+### Authentication Settings
+
+The following options allow you to customize authentication behavior.
+
+| Option               | Details                                                                                                                                           |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `DISABLE_LOCAL_AUTH` | Set to `true` to disable local authentication. This is only recommended for deployments that use an external authentication provider (i.e. OIDC). |
+| `DISABLE_NEW_USERS`  | Set to `true` to prevent new user registrations.                                                                                                  |
+
+### Server Settings
+
+These settings allow you to customize the behavior of the Budget Board server.
+
+| Option                | Details                                                                                  |
+| --------------------- | ---------------------------------------------------------------------------------------- |
+| `AUTO_UPDATE_DB`      | Set to `true` to enable automatic database migrations when the server starts.            |
+| `DISABLE_AUTO_SYNC`   | Set to `true` to disable automatic syncs.                                                |
+| `SYNC_INTERVAL_HOURS` | The number of hours between automatic syncs. If not specified, this defaults to 8 hours. |

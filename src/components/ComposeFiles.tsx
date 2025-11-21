@@ -11,10 +11,10 @@ const ComposeFiles = (): React.ReactNode => {
           language="yml"
         />
       </TabItem>
-      <TabItem value="compose.override.yml">
+      <TabItem value="compose.env">
         <CodeFileBlock
-          fileUrl="https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.override.yml"
-          language="yml"
+          fileUrl="https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.env"
+          language="bash"
         />
       </TabItem>
     </Tabs>

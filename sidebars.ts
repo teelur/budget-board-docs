@@ -18,7 +18,25 @@ const sidebars: SidebarsConfig = {
       type: "category",
       label: "Deploy",
       link: { type: "doc", id: "deploy/index" },
-      items: ["deploy/configuration", "deploy/versions"],
+      items: [
+        {
+          type: "category",
+          label: "Configuration",
+          link: { type: "doc", id: "deploy/configuration/index" },
+          items: [
+            "deploy/configuration/email-sender",
+            "deploy/configuration/oidc-authentication",
+            {
+              type: "category",
+              label: "Migration Guides",
+              items: [
+                "deploy/configuration/migration-guides/v2.x-to-v3.x-migration",
+              ],
+            },
+          ],
+        },
+        "deploy/versions",
+      ],
     },
     {
       type: "doc",

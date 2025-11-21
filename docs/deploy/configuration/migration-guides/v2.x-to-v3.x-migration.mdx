@@ -1,0 +1,23 @@
+# v2.x to v3.x Migration
+
+The compose files for Budget Board have changed between version 2 and version 3. This document outlines the changes you need to make to your compose files when migrating from v2.x to v3.x.
+
+## Compose File Format Changes
+
+In version 2, the `compose.override.yml` file contained custom environment variable settings. In version 3, these settings have been moved to the `compose.env` file.
+
+When migrating, it is highly recommended to copy the v3.x `compose.env` file and transfer your custom environment variable settings from your old `compose.override.yml` file. Ensure that you update the variable names according to the changes outlined below.
+
+## Summary of Environment Variable Changes
+
+In addition to the file format changes, a few new environment variables are now required, and some existing variables have been renamed.
+
+| v2 Variable                  | v3 Variable           | Notes                                                                                                   |
+| ---------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
+| `VITE_API_URL`               | `BUDGET_BOARD_DOMAIN` | This is the domain you use to access Budget Board (e.g., `localhost:6253` or `budgetboard.example.com`) |
+| N/A                          | `SERVER_ADDRESS`      | New variable, typically does not need to be changed                                                     |
+| `PORT`                       | `PORT`                | Remains unchanged; now defined in the `compose.env` file rather than `compose.yml`                      |
+| `CLIENT_URL`                 | `CLIENT_ADDRESS`      | Set to the same value as in v2                                                                          |
+| `Logging__LogLevel__Default` | `LOG_LEVEL`           | Set to the same value as in v2                                                                          |
+
+Make sure to update your deployment configurations accordingly to ensure a smooth transition from version 2 to version 3 of Budget Board.
