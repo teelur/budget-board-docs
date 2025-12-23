@@ -1541,37 +1541,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workerd-darwin-64@npm:1.20251213.0":
-  version: 1.20251213.0
-  resolution: "@cloudflare/workerd-darwin-64@npm:1.20251213.0"
+"@cloudflare/workerd-darwin-64@npm:1.20251217.0":
+  version: 1.20251217.0
+  resolution: "@cloudflare/workerd-darwin-64@npm:1.20251217.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@cloudflare/workerd-darwin-arm64@npm:1.20251213.0":
-  version: 1.20251213.0
-  resolution: "@cloudflare/workerd-darwin-arm64@npm:1.20251213.0"
+"@cloudflare/workerd-darwin-arm64@npm:1.20251217.0":
+  version: 1.20251217.0
+  resolution: "@cloudflare/workerd-darwin-arm64@npm:1.20251217.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@cloudflare/workerd-linux-64@npm:1.20251213.0":
-  version: 1.20251213.0
-  resolution: "@cloudflare/workerd-linux-64@npm:1.20251213.0"
+"@cloudflare/workerd-linux-64@npm:1.20251217.0":
+  version: 1.20251217.0
+  resolution: "@cloudflare/workerd-linux-64@npm:1.20251217.0"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@cloudflare/workerd-linux-arm64@npm:1.20251213.0":
-  version: 1.20251213.0
-  resolution: "@cloudflare/workerd-linux-arm64@npm:1.20251213.0"
+"@cloudflare/workerd-linux-arm64@npm:1.20251217.0":
+  version: 1.20251217.0
+  resolution: "@cloudflare/workerd-linux-arm64@npm:1.20251217.0"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@cloudflare/workerd-windows-64@npm:1.20251213.0":
-  version: 1.20251213.0
-  resolution: "@cloudflare/workerd-windows-64@npm:1.20251213.0"
+"@cloudflare/workerd-windows-64@npm:1.20251217.0":
+  version: 1.20251217.0
+  resolution: "@cloudflare/workerd-windows-64@npm:1.20251217.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2285,7 +2285,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/core@npm:3.9.2, @docusaurus/core@npm:^3.9.1":
+"@docusaurus/core@npm:3.9.2, @docusaurus/core@npm:^3.9.2":
   version: 3.9.2
   resolution: "@docusaurus/core@npm:3.9.2"
   dependencies:
@@ -2398,7 +2398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/module-type-aliases@npm:3.9.2, @docusaurus/module-type-aliases@npm:^3.9.1":
+"@docusaurus/module-type-aliases@npm:3.9.2, @docusaurus/module-type-aliases@npm:^3.9.2":
   version: 3.9.2
   resolution: "@docusaurus/module-type-aliases@npm:3.9.2"
   dependencies:
@@ -2609,7 +2609,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/preset-classic@npm:^3.9.1":
+"@docusaurus/preset-classic@npm:^3.9.2":
   version: 3.9.2
   resolution: "@docusaurus/preset-classic@npm:3.9.2"
   dependencies:
@@ -2732,30 +2732,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/tsconfig@npm:3.8.1":
-  version: 3.8.1
-  resolution: "@docusaurus/tsconfig@npm:3.8.1"
-  checksum: 10c0/137aad26f2f3cf7b36a80b36f25170cdb00f51d03e8aa10d4c7eaa2550770ec48d269ce016d852f13c9390176b70bbbb87af4946c4ca891d4be1f61a745a95a5
-  languageName: node
-  linkType: hard
-
-"@docusaurus/types@npm:3.8.1":
-  version: 3.8.1
-  resolution: "@docusaurus/types@npm:3.8.1"
-  dependencies:
-    "@mdx-js/mdx": "npm:^3.0.0"
-    "@types/history": "npm:^4.7.11"
-    "@types/react": "npm:*"
-    commander: "npm:^5.1.0"
-    joi: "npm:^17.9.2"
-    react-helmet-async: "npm:@slorber/react-helmet-async@1.3.0"
-    utility-types: "npm:^3.10.0"
-    webpack: "npm:^5.95.0"
-    webpack-merge: "npm:^5.9.0"
-  peerDependencies:
-    react: ^18.0.0 || ^19.0.0
-    react-dom: ^18.0.0 || ^19.0.0
-  checksum: 10c0/1a70a104c73b8cd6329e5feda72732be606d65d5fbd7b99453756dac50dd91f7d35ddacd782468d7b92f786ab0094a68bed45e52fa104e5fa3bb4836282a6f41
+"@docusaurus/tsconfig@npm:3.9.2":
+  version: 3.9.2
+  resolution: "@docusaurus/tsconfig@npm:3.9.2"
+  checksum: 10c0/d46241cb488d60f785710ee24980aad394423eaf5f76b64b0d47158fcbe19dd68a886898db83b1b65de18dfeb6c27d78adc8f8c4451d1ac29cc9da009ed15cd4
   languageName: node
   linkType: hard
 
@@ -3438,7 +3418,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:^3.0.0":
+"@mdx-js/react@npm:^3.0.0, @mdx-js/react@npm:^3.1.1":
   version: 3.1.1
   resolution: "@mdx-js/react@npm:3.1.1"
   dependencies:
@@ -4983,18 +4963,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "budget-board-docs@workspace:."
   dependencies:
-    "@docusaurus/core": "npm:^3.9.1"
-    "@docusaurus/module-type-aliases": "npm:^3.9.1"
-    "@docusaurus/preset-classic": "npm:^3.9.1"
-    "@docusaurus/tsconfig": "npm:3.8.1"
-    "@docusaurus/types": "npm:3.8.1"
-    "@mdx-js/react": "npm:^3.0.0"
-    clsx: "npm:^2.0.0"
-    prism-react-renderer: "npm:^2.3.0"
-    react: "npm:^19.0.0"
-    react-dom: "npm:^19.0.0"
-    typescript: "npm:~5.6.2"
-    wrangler: "npm:^4.55.0"
+    "@docusaurus/core": "npm:^3.9.2"
+    "@docusaurus/module-type-aliases": "npm:^3.9.2"
+    "@docusaurus/preset-classic": "npm:^3.9.2"
+    "@docusaurus/tsconfig": "npm:3.9.2"
+    "@docusaurus/types": "npm:3.9.2"
+    "@mdx-js/react": "npm:^3.1.1"
+    clsx: "npm:^2.1.1"
+    prism-react-renderer: "npm:^2.4.1"
+    react: "npm:^19.2.3"
+    react-dom: "npm:^19.2.3"
+    typescript: "npm:~5.9.3"
+    wrangler: "npm:^4.56.0"
   languageName: unknown
   linkType: soft
 
@@ -5326,7 +5306,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^2.0.0":
+"clsx@npm:^2.0.0, clsx@npm:^2.1.1":
   version: 2.1.1
   resolution: "clsx@npm:2.1.1"
   checksum: 10c0/c4c8eb865f8c82baab07e71bfa8897c73454881c4f99d6bc81585aecd7c441746c1399d08363dc096c550cceaf97bd4ce1e8854e1771e9998d9f94c4fe075839
@@ -9430,9 +9410,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"miniflare@npm:4.20251213.0":
-  version: 4.20251213.0
-  resolution: "miniflare@npm:4.20251213.0"
+"miniflare@npm:4.20251217.0":
+  version: 4.20251217.0
+  resolution: "miniflare@npm:4.20251217.0"
   dependencies:
     "@cspotcode/source-map-support": "npm:0.8.1"
     acorn: "npm:8.14.0"
@@ -9442,13 +9422,13 @@ __metadata:
     sharp: "npm:^0.33.5"
     stoppable: "npm:1.1.0"
     undici: "npm:7.14.0"
-    workerd: "npm:1.20251213.0"
+    workerd: "npm:1.20251217.0"
     ws: "npm:8.18.0"
     youch: "npm:4.1.0-beta.10"
     zod: "npm:3.22.3"
   bin:
     miniflare: bootstrap.js
-  checksum: 10c0/36820e959d8aef2c699e4ea0ee3292006bb704fa40511761fb1a6213f93efa67d1b2703431edbbb62f94cbb729269eab08e50821853b00335976c0e553b3d67c
+  checksum: 10c0/235cb015c08e7f8ed2add65f79a558b490ed2465892e25be8fe62a2556392ed715d57104c744af3b902ec23c9f3dfd330f9ed1d4e32b2c7c6b338086a6e4c468
   languageName: node
   linkType: hard
 
@@ -10978,7 +10958,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prism-react-renderer@npm:^2.3.0":
+"prism-react-renderer@npm:^2.3.0, prism-react-renderer@npm:^2.4.1":
   version: 2.4.1
   resolution: "prism-react-renderer@npm:2.4.1"
   dependencies:
@@ -11154,7 +11134,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.0.0":
+"react-dom@npm:^19.2.3":
   version: 19.2.3
   resolution: "react-dom@npm:19.2.3"
   dependencies:
@@ -11275,7 +11255,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.0.0":
+"react@npm:^19.2.3":
   version: 19.2.3
   resolution: "react@npm:19.2.3"
   checksum: 10c0/094220b3ba3a76c1b668f972ace1dd15509b157aead1b40391d1c8e657e720c201d9719537375eff08f5e0514748c0319063392a6f000e31303aafc4471f1436
@@ -12733,23 +12713,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:~5.6.2":
-  version: 5.6.3
-  resolution: "typescript@npm:5.6.3"
+"typescript@npm:~5.9.3":
+  version: 5.9.3
+  resolution: "typescript@npm:5.9.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/44f61d3fb15c35359bc60399cb8127c30bae554cd555b8e2b46d68fa79d680354b83320ad419ff1b81a0bdf324197b29affe6cc28988cd6a74d4ac60c94f9799
+  checksum: 10c0/6bd7552ce39f97e711db5aa048f6f9995b53f1c52f7d8667c1abdc1700c68a76a308f579cd309ce6b53646deb4e9a1be7c813a93baaf0a28ccd536a30270e1c5
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A~5.6.2#optional!builtin<compat/typescript>":
-  version: 5.6.3
-  resolution: "typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"
+"typescript@patch:typescript@npm%3A~5.9.3#optional!builtin<compat/typescript>":
+  version: 5.9.3
+  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/7c9d2e07c81226d60435939618c91ec2ff0b75fbfa106eec3430f0fcf93a584bc6c73176676f532d78c3594fe28a54b36eb40b3d75593071a7ec91301533ace7
+  checksum: 10c0/ad09fdf7a756814dce65bc60c1657b40d44451346858eea230e10f2e95a289d9183b6e32e5c11e95acc0ccc214b4f36289dcad4bf1886b0adb84d711d336a430
   languageName: node
   linkType: hard
 
@@ -13332,15 +13312,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"workerd@npm:1.20251213.0":
-  version: 1.20251213.0
-  resolution: "workerd@npm:1.20251213.0"
+"workerd@npm:1.20251217.0":
+  version: 1.20251217.0
+  resolution: "workerd@npm:1.20251217.0"
   dependencies:
-    "@cloudflare/workerd-darwin-64": "npm:1.20251213.0"
-    "@cloudflare/workerd-darwin-arm64": "npm:1.20251213.0"
-    "@cloudflare/workerd-linux-64": "npm:1.20251213.0"
-    "@cloudflare/workerd-linux-arm64": "npm:1.20251213.0"
-    "@cloudflare/workerd-windows-64": "npm:1.20251213.0"
+    "@cloudflare/workerd-darwin-64": "npm:1.20251217.0"
+    "@cloudflare/workerd-darwin-arm64": "npm:1.20251217.0"
+    "@cloudflare/workerd-linux-64": "npm:1.20251217.0"
+    "@cloudflare/workerd-linux-arm64": "npm:1.20251217.0"
+    "@cloudflare/workerd-windows-64": "npm:1.20251217.0"
   dependenciesMeta:
     "@cloudflare/workerd-darwin-64":
       optional: true
@@ -13354,25 +13334,25 @@ __metadata:
       optional: true
   bin:
     workerd: bin/workerd
-  checksum: 10c0/4884222ea995e8387efa3d86290cc700e7b150b4a0b9ef6d4ea1a6b2382941546edc2f5aae37c06420b41297076b7bbbbd4a73f1bb8f815ea5993849b4b4900f
+  checksum: 10c0/4402c17823b52a7fecd3412f748601d6ae5e60907c295c09bf9517726e016f6914cbc6071e9aa28efc97696e087c23e107768b5d968f67efc28e2805d4fdd31a
   languageName: node
   linkType: hard
 
-"wrangler@npm:^4.55.0":
-  version: 4.55.0
-  resolution: "wrangler@npm:4.55.0"
+"wrangler@npm:^4.56.0":
+  version: 4.56.0
+  resolution: "wrangler@npm:4.56.0"
   dependencies:
     "@cloudflare/kv-asset-handler": "npm:0.4.1"
     "@cloudflare/unenv-preset": "npm:2.7.13"
     blake3-wasm: "npm:2.1.5"
     esbuild: "npm:0.27.0"
     fsevents: "npm:~2.3.2"
-    miniflare: "npm:4.20251213.0"
+    miniflare: "npm:4.20251217.0"
     path-to-regexp: "npm:6.3.0"
     unenv: "npm:2.0.0-rc.24"
-    workerd: "npm:1.20251213.0"
+    workerd: "npm:1.20251217.0"
   peerDependencies:
-    "@cloudflare/workers-types": ^4.20251213.0
+    "@cloudflare/workers-types": ^4.20251217.0
   dependenciesMeta:
     fsevents:
       optional: true
@@ -13382,7 +13362,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 10c0/8e4d10a35a0711b66ac5c9f50ed860e8d5ac309cbfee7c044f93117d0828b2fa5bf7841c540f3c1c637678d018338b16eaff992d1f79a0706216304ee5c94617
+  checksum: 10c0/494a6c7e650fca31945d0c787c1cc45ab06c3223e25be20f0a4eb100c490050ece4494eefec610ad8859ec59989944bfa5d6cfcd515ad074c56dc34a5094dc21
   languageName: node
   linkType: hard
 
