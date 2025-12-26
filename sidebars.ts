@@ -61,6 +61,11 @@ const sidebars: SidebarsConfig = {
         "features/goals",
       ],
     },
+    {
+      type: "category",
+      label: "Contributing",
+      items: ["contributing/translations"],
+    },
   ],
 };
 
