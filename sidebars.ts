@@ -72,6 +72,11 @@ const sidebars: SidebarsConfig = {
       label: "Contributing",
       items: ["contributing/translations"],
     },
+    {
+      type: "category",
+      label: "Release Notes",
+      items: ["release-notes/release-v3.1.0"],
+    },
   ],
 };
 
