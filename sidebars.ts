@@ -55,6 +55,7 @@ const sidebars: SidebarsConfig = {
             "features/importing-data/csv-import",
           ],
         },
+        "features/dashboard",
         "features/accounts",
         "features/assets",
         "features/budgets",
