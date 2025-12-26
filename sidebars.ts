@@ -15,6 +15,11 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 const sidebars: SidebarsConfig = {
   docs: [
     {
+      type: "doc",
+      id: "overview/index",
+      label: "Overview",
+    },
+    {
       type: "category",
       label: "Deploy",
       link: { type: "doc", id: "deploy/index" },
