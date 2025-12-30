@@ -60,11 +60,22 @@ const sidebars: SidebarsConfig = {
             "features/importing-data/csv-import",
           ],
         },
+        "features/dashboard",
         "features/accounts",
         "features/assets",
         "features/budgets",
         "features/goals",
       ],
+    },
+    {
+      type: "category",
+      label: "Contributing",
+      items: ["contributing/translations"],
+    },
+    {
+      type: "category",
+      label: "Release Notes",
+      items: ["release-notes/release-v3.1.0"],
     },
   ],
 };

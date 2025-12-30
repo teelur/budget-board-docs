@@ -1,0 +1,85 @@
+---
+title: "Release v3.1.0"
+---
+
+# Localization Support, Customizable Net Worth Card, and UI Improvements
+
+## New Features
+
+### Localization Support
+
+Added support for multiple languages! Users can now select their preferred language from the settings menu. If set to `System Default`, Budget Board will use the browser's language settings.
+
+Currently, Budget Board only includes US English translations. However, we welcome contributions for additional languages. If you're interested in helping with translations, please check out our [localization guide](../contributing/translations.mdx) in the wiki.
+
+### Customizable Net Worth Card
+
+Users can now customize the Net Worth card on the dashboard. You can choose which accounts to include in the net worth calculation and adjust the display settings to your preference.
+
+![Net Worth Settings](/img/release-template/v3.1.0/net-worth-settings.png)
+
+### UI Improvements
+
+This update brings an overhaul to the UI to improve consistency across the application. Colors have been tweaked for better visibility and aesthetics, and several components have been refined to enhance the overall user experience.
+
+#### Dark Mode
+
+The dark mode color scheme has been updated for better contrast and a more consistent shading hierarchy.
+
+##### Old Dark Mode UI
+
+![Old Dashboard UI](/img/release-template/v3.1.0/dashboard-old-dark.png)
+
+##### New Dark Mode UI
+
+![New Dashboard UI](/img/release-template/v3.1.0/dashboard-new-dark.png)
+
+#### Light Mode
+
+The biggest changes were to the light mode color scheme, making it a bit more visually appealing and consistent with the dark mode shading.
+
+##### Old Light Mode UI
+
+![Old Light Mode UI](/img/release-template/v3.1.0/dashboard-old-light.png)
+
+##### New Light Mode UI
+
+![New Light Mode UI](/img/release-template/v3.1.0/dashboard-new-light.png)
+
+## What's Next
+
+### New Bank Sync Provider Support
+
+In the next release, I plan on focusing on implementing a new bank sync provider, [LunchFlow](https://lunchflow.app/). This will require a new page to manage bank sync provider connections, and a new feature to map accounts from different providers to Budget Board accounts.
+
+### Customizable Dashboard
+
+After the bank sync provider improvements, I am hoping to build on what was done for the Net Worth card and allow users to customize their entire dashboard. This would include adding/removing cards, rearranging them, and possibly resizing them. This will likely be completed in stages over multiple releases.
+
+## What's Changed
+
+- Backend Cleanup by @teelur in https://github.com/teelur/budget-board/pull/611
+- make builds parallel by @teelur in https://github.com/teelur/budget-board/pull/613
+- fix multiarch image by @teelur in https://github.com/teelur/budget-board/pull/614
+- fix sync lookback logic by @teelur in https://github.com/teelur/budget-board/pull/612
+- add build tag for non-release builds by @teelur in https://github.com/teelur/budget-board/pull/615
+- Update budget summary by @teelur in https://github.com/teelur/budget-board/pull/623
+- Color tweaks by @teelur in https://github.com/teelur/budget-board/pull/627
+- fix loader background by @teelur in https://github.com/teelur/budget-board/pull/628
+- Fix some overridden colors by @teelur in https://github.com/teelur/budget-board/pull/631
+- Progress bar changes by @teelur in https://github.com/teelur/budget-board/pull/632
+- tweak some light mode colors by @teelur in https://github.com/teelur/budget-board/pull/633
+- Budget create error catching by @teelur in https://github.com/teelur/budget-board/pull/634
+- Net worth card customization by @teelur in https://github.com/teelur/budget-board/pull/641
+- Fix circular dependency detection by @teelur in https://github.com/teelur/budget-board/pull/642
+- Change description to merchant name for transactions by @teelur in https://github.com/teelur/budget-board/pull/644
+- Update deps by @teelur in https://github.com/teelur/budget-board/pull/645
+- Frontend localization by @teelur in https://github.com/teelur/budget-board/pull/649
+- Fix budget summary by @teelur in https://github.com/teelur/budget-board/pull/651
+- Add language override by @teelur in https://github.com/teelur/budget-board/pull/653
+- Fix misc stuff from testing by @teelur in https://github.com/teelur/budget-board/pull/655
+- update readme by @teelur in https://github.com/teelur/budget-board/pull/656
+- fix elevated background by @teelur in https://github.com/teelur/budget-board/pull/657
+- Fix rule edit by @teelur in https://github.com/teelur/budget-board/pull/660
+
+**Full Changelog**: https://github.com/teelur/budget-board/compare/v3.0.0...v3.1.0
