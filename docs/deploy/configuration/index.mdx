@@ -8,20 +8,17 @@ If you plan to use the app long-term, you can customize your deployment using th
 
 These values are critical to the function of the `budget-board-client` container.
 
-| Option                | Details                                                                                                        |
-| --------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `BUDGET_BOARD_DOMAIN` | This is the domain you use to access Budget Board. (e.g., `localhost:6253` or `budget-board.example.com`)       |
-| `SERVER_ADDRESS`      | This is the address of your `budget-board-server` container. The default value will work for most deployments. |
-| `PORT`                | This is the port on which you will access Budget Board.                                                        |
+| Option | Details                                                                                         |
+| ------ | ----------------------------------------------------------------------------------------------- |
+| `PORT` | Change this if you would like to access Budget Board on a different port from the default 6253. |
 
 ### Server Configuration
 
 These values are critical to the function of the `budget-board-server` container.
 
-| Option           | Details                                                                                                        |
-| ---------------- | -------------------------------------------------------------------------------------------------------------- |
-| `CLIENT_ADDRESS` | This is the address of your `budget-board-client` container. The default value will work for most deployments. |
-| `LOG_LEVEL`      | The logging level of the server. By default this is set to the most verbose level.                             |
+| Option      | Details                                                                            |
+| ----------- | ---------------------------------------------------------------------------------- |
+| `LOG_LEVEL` | The logging level of the server. By default this is set to the most verbose level. |
 
 ### Database Configuration
 
