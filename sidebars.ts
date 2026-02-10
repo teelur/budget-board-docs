@@ -56,7 +56,18 @@ const sidebars: SidebarsConfig = {
           type: "category",
           label: "Importing Data",
           items: [
-            "features/importing-data/simplefin-sync",
+            {
+              type: "category",
+              label: "External Providers",
+              link: {
+                type: "doc",
+                id: "features/importing-data/external-providers/index",
+              },
+              items: [
+                "features/importing-data/external-providers/simplefin",
+                "features/importing-data/external-providers/lunchflow",
+              ],
+            },
             "features/importing-data/csv-import",
           ],
         },
