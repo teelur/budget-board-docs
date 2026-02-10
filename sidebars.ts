@@ -65,6 +65,7 @@ const sidebars: SidebarsConfig = {
         "features/assets",
         "features/budgets",
         "features/goals",
+        "features/auto-categorization",
       ],
     },
     {
@@ -76,6 +77,7 @@ const sidebars: SidebarsConfig = {
       type: "category",
       label: "Release Notes",
       items: [
+        "release-notes/release-v3.2.0",
         "release-notes/release-v3.1.6",
         "release-notes/release-v3.1.5",
         "release-notes/release-v3.1.4",
