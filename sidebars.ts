@@ -56,7 +56,18 @@ const sidebars: SidebarsConfig = {
           type: "category",
           label: "Importing Data",
           items: [
-            "features/importing-data/simplefin-sync",
+            {
+              type: "category",
+              label: "External Providers",
+              link: {
+                type: "doc",
+                id: "features/importing-data/external-providers/index",
+              },
+              items: [
+                "features/importing-data/external-providers/simplefin",
+                "features/importing-data/external-providers/lunchflow",
+              ],
+            },
             "features/importing-data/csv-import",
           ],
         },
@@ -65,6 +76,7 @@ const sidebars: SidebarsConfig = {
         "features/assets",
         "features/budgets",
         "features/goals",
+        "features/auto-categorization",
       ],
     },
     {
@@ -75,7 +87,16 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Release Notes",
-      items: ["release-notes/release-v3.1.0"],
+      items: [
+        "release-notes/release-v3.2.0",
+        "release-notes/release-v3.1.6",
+        "release-notes/release-v3.1.5",
+        "release-notes/release-v3.1.4",
+        "release-notes/release-v3.1.3",
+        "release-notes/release-v3.1.2",
+        "release-notes/release-v3.1.1",
+        "release-notes/release-v3.1.0",
+      ],
     },
   ],
 };

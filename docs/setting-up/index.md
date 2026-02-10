@@ -18,11 +18,11 @@ If you've set up OpenID Connect (OIDC) authentication, log in using the `Login w
 
 After creating your login, set up the financial accounts you want to track. You can add financial accounts in several ways.
 
-### Sync via SimpleFIN
+### Sync via external providers
 
-If you've set up SimpleFIN integration, your financial accounts will be added automatically when you run a sync.
+You can use an external provider (SimpleFIN, LunchFlow, etc.) to automatically sync data from your financial accounts.
 
-See the [SimpleFIN Sync](../features/importing-data/simplefin-sync#getting-started) page for more details.
+See the [External Providers](../features/importing-data/external-providers/) page for more details.
 
 ### Manually create accounts
 
@@ -34,9 +34,9 @@ See the [Accounts](../features/accounts#creating-accounts) page for details.
 
 Now that your financial accounts have been added, you can add transactions.
 
-### Sync via SimpleFIN
+### Sync via external providers
 
-If you've linked SimpleFIN, transactions are imported automatically when you run a sync.
+If you've linked an external provider, transactions are imported automatically when you run a sync.
 
 ### Import via CSV
 
@@ -44,7 +44,7 @@ For bulk imports, use a CSV file. See [Import via CSV](../features/importing-dat
 
 ### Manually create transactions
 
-Create transactions manually on the Transactions page by clicking the `+` button in the top-right. Fill out the required fields and click `Submit`.
+Create transactions manually on the Transactions page by clicking the `+` button in the top right. Fill out the required fields and click `Submit`.
 
 :::tip
 Useful for one-off transactions, such as a single cash purchase.
@@ -88,4 +88,4 @@ Track non-account-based assets like property or vehicles. See the [Assets](../fe
 
 ## Set goals
 
-Create goals to track savings targets or paying off debt. See the [Goals](../features/goals.mdx) page for details.
+Create goals to track savings targets or pay off debt. See the [Goals](../features/goals.mdx) page for details.

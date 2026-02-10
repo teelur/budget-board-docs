@@ -1,0 +1,61 @@
+---
+title: "Release v3.2.0"
+---
+
+# Auto-Categorization, New External Providers Interface, LunchFlow Support, and New Languages
+
+## New Features
+
+### Auto-Categorization
+
+Huge thanks to @awilner for implementing this feature! Budget Board can now train a machine learning model on your categorized transactions and use that model to predict categories for new transactions. This can save a lot of time when categorizing transactions, especially if you regularly have similar transactions (e.g. recurring bills, regular purchases from the same stores, etc.).
+
+See the [Auto-Categorization page](../features/auto-categorization) in the wiki for more details on how to use this feature and how it works under the hood.
+
+### New External Providers Interface
+
+Previously, the only external provider was SimpleFIN, and the connection was managed entirely through the Settings page. When a sync was performed, accounts were created in Budget Board for each account in SimpleFIN, and transactions were imported into those accounts. This worked fine when there was only one provider, but it would not scale well as more providers were added.
+
+To better support multiple providers, I have implemented a new interface for managing external provider connections. On this page you will be able to set up the connection to an external provider (SimpleFIN, LunchFlow, etc.), and selectively map accounts from that provider to accounts in Budget Board. This will allow for more flexibility and control over how external data is imported into Budget Board.
+
+![External Providers Page](/img/release-template/v3.2.0/external-providers-page.png)
+
+### LunchFlow Support
+
+I have added support for [LunchFlow](https://lunchflow.app/) as an external provider. LunchFlow is a financial data aggregation service similar to SimpleFIN, but with support for more institutions, particularly institutions outside of the U.S. Users can now connect their LunchFlow account to Budget Board and import their financial data in the same way as they could with SimpleFIN.
+
+### New Languages
+
+The community has contributed translations for a few new languages, so I have added support for a couple that have had some meaningful progress. The new languages added in this release are:
+
+- German
+- Simplified Chinese
+
+If you would like to help complete these translations, or contribute translations for a new language, please check out our [localization guide](../contributing/translations) in the wiki.
+
+## What's Changed
+
+- External sync provider linking by @teelur in https://github.com/teelur/budget-board/pull/682
+- Fixing bug that ignored custom transactions on CSV import (#673) by @awilner in https://github.com/teelur/budget-board/pull/674
+- Autocomplete institution name by @teelur in https://github.com/teelur/budget-board/pull/686
+- Allow custom date formats by @teelur in https://github.com/teelur/budget-board/pull/689
+- Add amount parsing options by @teelur in https://github.com/teelur/budget-board/pull/690
+- Fix unbudget category cards by @teelur in https://github.com/teelur/budget-board/pull/692
+- Misc UI fixes by @teelur in https://github.com/teelur/budget-board/pull/696
+- remove unused config options by @teelur in https://github.com/teelur/budget-board/pull/699
+- Bump react-router from 7.10.1 to 7.12.0 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/702
+- Fix duplicate parent budget error by @teelur in https://github.com/teelur/budget-board/pull/704
+- Bump tar from 7.4.3 to 7.5.3 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/705
+- Bump tar from 7.5.3 to 7.5.6 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/707
+- Bump lodash from 4.17.21 to 4.17.23 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/708
+- Auto categorizer by @awilner in https://github.com/teelur/budget-board/pull/709
+- Lunchflow integration by @teelur in https://github.com/teelur/budget-board/pull/711
+- Misc changes for auto-categorizer by @teelur in https://github.com/teelur/budget-board/pull/713
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/681
+- Bump tar from 7.5.6 to 7.5.7 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/715
+- Add new languages by @teelur in https://github.com/teelur/budget-board/pull/716
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/714
+- reset parent when toggled by @teelur in https://github.com/teelur/budget-board/pull/722
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/721
+
+**Full Changelog**: https://github.com/teelur/budget-board/compare/v3.1.3...v3.2.0
