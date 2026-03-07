@@ -1,0 +1,57 @@
+---
+title: "Release v3.3.0"
+---
+
+# Localized Dates and Amounts, Resend Confirmation Email, and SimpleFIN Lookback Change
+
+## Behavior Changes
+
+### SimpleFIN Lookback Change
+
+SimpleFIN has updated its lookback period from 365 days to 90 days. This means that when you perform a sync with SimpleFIN, only transactions from the last 90 days will be imported into Budget Board.
+
+If you have set the `Force Sync Lookback Period` setting to a value greater than 90 days, it will be automatically reduced to 90 days when syncing with SimpleFIN.
+
+## New Features
+
+### Localized Dates and Amounts
+
+Updates have been made to allow for localization to apply to date and number formatting. Thousand separators, decimal separators, and date formats will now be determined by the selected language. You can override the default date format with a new setting on the `Settings` page.
+
+### Resend Confirmation Email
+
+When creating a new account, a confirmation email is sent to the provided email address (given you have set up an email provider). If you did not receive the email, or if the link has expired, you can now resend the confirmation email from the popup that appears when you try to log in with an unconfirmed account.
+
+### New Languages
+
+The new language added in this release is:
+
+- French
+
+If you would like to help complete these translations, or contribute translations for a new language, please check out our [localization guide](../contributing/translations) in the wiki.
+
+## What's Changed
+
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/725
+- Localize date by @teelur in https://github.com/teelur/budget-board/pull/733
+- Change filter panel transition by @teelur in https://github.com/teelur/budget-board/pull/735
+- Fix doubled budget values caused by Category = Subcategory in transaction data by @jsmith613 in https://github.com/teelur/budget-board/pull/734
+- Configure thousands separator by @teelur in https://github.com/teelur/budget-board/pull/736
+- Don't require password for SMTP connection by @teelur in https://github.com/teelur/budget-board/pull/739
+- Bump tar from 7.5.7 to 7.5.9 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/742
+- Email changes by @teelur in https://github.com/teelur/budget-board/pull/743
+- Bump rollup from 4.46.2 to 4.59.0 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/745
+- Bump minimatch from 3.1.2 to 3.1.5 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/746
+- Update deps by @teelur in https://github.com/teelur/budget-board/pull/747
+- Update sync lookback by @teelur in https://github.com/teelur/budget-board/pull/750
+- add french support by @teelur in https://github.com/teelur/budget-board/pull/751
+- Bump tar from 7.5.9 to 7.5.10 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/752
+- update deps by @teelur in https://github.com/teelur/budget-board/pull/753
+- update french label by @teelur in https://github.com/teelur/budget-board/pull/754
+- test out some changes to nginx by @teelur in https://github.com/teelur/budget-board/pull/755
+
+## New Contributors
+
+- @jsmith613 made their first contribution in https://github.com/teelur/budget-board/pull/734
+
+**Full Changelog**: https://github.com/teelur/budget-board/compare/v3.2.1...v3.3.0
