@@ -4,7 +4,7 @@
 
 Budget Board uses Docker for deployment. Ensure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed on your machine before proceeding.
 
-### Sync the Compose Files
+### Download the Compose Files
 
 There are two files needed to deploy the app:
 
@@ -20,7 +20,7 @@ curl -O https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/co
 On Windows (PowerShell), use:
 
 ```powershell
-Invoke-WebRequest -OutFile compose.yml https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.yml && Invoke-WebRequest -OutFile compose.env https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.env
+Invoke-WebRequest -OutFile compose.yml https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.yml; Invoke-WebRequest -OutFile compose.env https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.env
 ```
 
 ```mdx-code-block
@@ -33,7 +33,12 @@ import ComposeFiles from "@site/src/components/ComposeFiles";
 
 If you are just testing the app, the compose files will deploy without any changes.
 
-For production, it is strongly recommended to edit the variables in `compose.env` to suit your environment. See the [Configuration](./configuration/index.mdx) page for more details.
+For production, it is strongly recommended to edit the variables in `compose.env` to suit your environment. At a minimum, you should update the following variables:
+
+- `POSTGRES_PASSWORD`: Change this to a strong password for the PostgreSQL database.
+- **Email Sender Configuration**: If you don't plan on using OIDC for authentication, it is highly recommended to set up an email sender for account confirmation and password resets. If you don't set this up, you will have no way of resetting your password if you forget it.
+
+See the [Configuration](./configuration/index.mdx) page for more details.
 
 ### Deploy Budget Board
 

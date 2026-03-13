@@ -1,0 +1,32 @@
+# Automatic Rules
+
+Automatic rules allow you to update transaction fields that match certain criteria automatically during sync.
+
+## Managing Rules
+
+To manage your automatic rules, navigate to the `Transaction Settings` page by clicking the gear icon on the top right of the `Transactions` page. Automatic rules are found under the `Automatic Rules` section.
+
+### Creating a Rule
+
+To create a new rule, you will first need to specify the criteria for the rule. You can specify multiple criteria for a rule, and all criteria must be met for the rule to apply to a transaction.
+Next, specify the actions that will be taken when a transaction matches the criteria. Similar to the criteria, you can specify multiple actions for a rule, and all actions will be applied to the matched transaction.
+
+### Editing and Deleting Rules
+
+Below the form for creating a new rule, you can see a list of your existing rules. You can edit or delete rules using the buttons on the right side of each rule.
+
+### Running Rules
+
+Rules can be triggered in a couple different ways.
+
+#### Manually
+
+You can run rules manually by clicking the triangle button on your existing rules or by clicking the `Run Rule` button on the new rule form.
+
+#### Automatically
+
+Rules will automatically run during sync.
+
+:::warning
+Automatic rules apply to all transactions both new and existing. Be careful when creating rules that update existing transactions, as this can lead to unintended consequences if the criteria are not specific enough.
+:::
