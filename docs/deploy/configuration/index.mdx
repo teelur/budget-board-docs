@@ -6,15 +6,15 @@ If you plan to use the app long-term, you can customize your deployment using th
 
 ### Client Configuration
 
-These values are critical to the function of the `budget-board-client` container.
+These are general configuration options for the `budget-board-client` container.
 
-| Option | Details                                                                                         |
-| ------ | ----------------------------------------------------------------------------------------------- |
-| `PORT` | Change this if you would like to access Budget Board on a different port from the default 6253. |
+| Option | Details                                                                                           |
+| ------ | ------------------------------------------------------------------------------------------------- |
+| `PORT` | Change this if you would like to access Budget Board on a different port from the default `6253`. |
 
 ### Server Configuration
 
-These values are critical to the function of the `budget-board-server` container.
+These are general configuration options for the `budget-board-server` container.
 
 | Option      | Details                                                                            |
 | ----------- | ---------------------------------------------------------------------------------- |
@@ -22,7 +22,13 @@ These values are critical to the function of the `budget-board-server` container
 
 ### Database Configuration
 
-These values are critical to the function of the `budget-board-db` container.
+These are general configuration options for the `budget-board-db` container.
+
+:::info
+If you are using the included postgresql container, the only value you need to set is `POSTGRES_PASSWORD`. The other values will default to the correct values for the included container.
+
+If you are using an external database, you will need to set all of these values to match your database configuration.
+:::
 
 | Option              | Details                                                                             |
 | ------------------- | ----------------------------------------------------------------------------------- |
@@ -34,7 +40,7 @@ These values are critical to the function of the `budget-board-db` container.
 
 ### OIDC Configuration
 
-These values are required if you plan to use an OIDC provider for authentication instead of the built-in username/password system.
+These values are required if you plan to use an OIDC provider for authentication instead of the built-in username/password authentication.
 
 | Option               | Details                                               |
 | -------------------- | ----------------------------------------------------- |
@@ -45,15 +51,15 @@ These values are required if you plan to use an OIDC provider for authentication
 
 ### Email Configuration
 
-The following values are required if you plan to use email features such as password resets and account verification.
+The following values are required if you plan to use email features such as password resets and account verification for local authentication.
 
-| Option                  | Details                                                                                                                                          |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `EMAIL_SENDER`          | The email address used to send verification and password-reset emails.                                                                           |
-| `EMAIL_SENDER_USERNAME` | The username for the SMTP server used to send verification and password-reset emails. If not specified, this defaults to the EMAIL_SENDER value. |
-| `EMAIL_SENDER_PASSWORD` | The password for the SMTP server used to send verification and password-reset emails.                                                            |
-| `EMAIL_SMTP_HOST`       | The SMTP host used to send email.                                                                                                                |
-| `EMAIL_SMTP_PORT`       | The port for the SMTP server.                                                                                                                    |
+| Option                  | Details                                                                                      |
+| ----------------------- | -------------------------------------------------------------------------------------------- |
+| `EMAIL_SENDER`          | The email address used to send verification and password-reset emails.                       |
+| `EMAIL_SENDER_USERNAME` | The username for the SMTP server. If not specified, this defaults to the EMAIL_SENDER value. |
+| `EMAIL_SENDER_PASSWORD` | The password for the SMTP server.                                                            |
+| `EMAIL_SMTP_HOST`       | The SMTP host used to send email.                                                            |
+| `EMAIL_SMTP_PORT`       | The port for the SMTP server.                                                                |
 
 ### Authentication Settings
 

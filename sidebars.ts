@@ -20,6 +20,11 @@ const sidebars: SidebarsConfig = {
       label: "Overview",
     },
     {
+      type: "doc",
+      id: "quick-start-guide/index",
+      label: "Quick Start Guide",
+    },
+    {
       type: "category",
       label: "Deploy",
       link: { type: "doc", id: "deploy/index" },
@@ -42,11 +47,6 @@ const sidebars: SidebarsConfig = {
         },
         "deploy/versions",
       ],
-    },
-    {
-      type: "doc",
-      id: "setting-up/index",
-      label: "Setting Up",
     },
     {
       type: "category",
@@ -74,9 +74,17 @@ const sidebars: SidebarsConfig = {
         "features/dashboard",
         "features/accounts",
         "features/assets",
+        {
+          type: "category",
+          label: "Transactions",
+          link: { type: "doc", id: "features/transactions/index" },
+          items: [
+            "features/transactions/automatic-rules",
+            "features/transactions/auto-categorization",
+          ],
+        },
         "features/budgets",
         "features/goals",
-        "features/auto-categorization",
       ],
     },
     {

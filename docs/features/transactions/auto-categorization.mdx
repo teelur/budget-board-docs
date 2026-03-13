@@ -1,0 +1,32 @@
+# Auto-Categorization
+
+The auto-categorization feature uses machine learning to predict the category of a transaction based on previously categorized transactions.
+
+## Setting Up
+
+:::tip
+The auto-categorization feature is trained on previously categorized transactions, so it is recommended to categorize a good number of transactions manually first to provide a strong training dataset for the model.
+:::
+
+To set up auto-categorization:
+
+1. Navigate to the `Settings` page and find the `Auto-Categorization` settings under the `Advanced Settings` section.
+2. Train the machine learning model by clicking the `Train Model` button. This may take a few minutes depending on the amount of transaction data you have and the performance of your machine.
+3. Once the model training is complete, you can enable auto-categorization by clicking the toggle button.
+4. Auto-categorization is now enabled, and new transactions will be automatically categorized.
+
+:::note
+Auto-categorization is only applied to transactions imported via external provider sync or CSV import.
+:::
+
+## Configuration
+
+The auto-categorization feature can be configured with the following settings.
+
+### Confidence Threshold
+
+When making a prediction, the machine learning model will have a confidence level associated with that prediction.
+The confidence threshold setting allows you to specify a minimum confidence level for auto-categorization.
+If the model's confidence in its prediction is below the threshold, the transaction will not be auto-categorized and will instead be left uncategorized for manual review.
+
+To configure this threshold, navigate to the `Settings` page and find the `Auto-Categorization` settings under the `Advanced Settings` section. You can adjust the confidence level with the `Auto-Categorizer Minimum Probability` setting.

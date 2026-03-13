@@ -2,9 +2,14 @@
 
 ## Deploy with Docker Compose
 
-Ensure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed on your machine.
+Budget Board uses Docker for deployment. Ensure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed on your machine before proceeding.
 
-### Sync the compose files to your machine
+### Download the Compose Files
+
+There are two files needed to deploy the app:
+
+- `compose.yml`: This file contains the base configuration, and should not be edited.
+- `compose.env`: This file contains environment variables that can be customized for your deployment.
 
 On macOS or Linux, you can download the compose files with:
 
@@ -15,11 +20,8 @@ curl -O https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/co
 On Windows (PowerShell), use:
 
 ```powershell
-Invoke-WebRequest -OutFile compose.yml https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.yml
-Invoke-WebRequest -OutFile compose.env https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.env
+Invoke-WebRequest -OutFile compose.yml https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.yml; Invoke-WebRequest -OutFile compose.env https://raw.githubusercontent.com/teelur/budget-board/refs/heads/main/compose.env
 ```
-
-`compose.yml` contains the base configuration; `compose.env` contains variables you should edit.
 
 ```mdx-code-block
 import ComposeFiles from "@site/src/components/ComposeFiles";
@@ -27,21 +29,26 @@ import ComposeFiles from "@site/src/components/ComposeFiles";
 <ComposeFiles />
 ```
 
-### Edit the variables in `compose.env`
+### Edit the Variables in `compose.env`
 
-For a quick demo the compose files work out of the box. For production, edit the variables in `compose.env` to suit your environment.
+If you are just testing the app, the compose files will deploy without any changes.
 
-It's strongly recommended to change the default passwords and to configure email settings for account verification and password recovery. See [Configuration](configuration/index.mdx) for details.
+For production, it is strongly recommended to edit the variables in `compose.env` to suit your environment. At a minimum, you should update the following variables:
 
-### Deploy
+- `POSTGRES_PASSWORD`: Change this to a strong password for the PostgreSQL database.
+- **Email Sender Configuration**: If you don't plan on using OIDC for authentication, it is highly recommended to set up an email sender for account confirmation and password resets. If you don't set this up, you will have no way of resetting your password if you forget it.
 
-Run the following command to start the services in detached mode:
+See the [Configuration](./configuration/index.mdx) page for more details.
+
+### Deploy Budget Board
+
+Run the following command to deploy the app:
 
 ```bash
 docker compose --env-file compose.env up -d
 ```
 
-### Access
+### Access Budget Board
 
 You can access the app by navigating to the following URL in your browser:
 

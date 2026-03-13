@@ -1,21 +1,28 @@
 # Accounts
 
-Accounts represent your financial accounts, such as bank accounts, credit cards, cash, etc. You can create and manage accounts on the `Accounts` page (click the bank icon on the sidebar).
+Accounts represent your financial accounts, such as bank accounts, credit cards, cash, etc. You can create and manage accounts on the `Accounts` page.
 
-## Account structure
+## Account Structure
 
-Accounts are grouped by Institution. An Institution represents the financial institution that holds your accounts, such as a bank or credit union.
+Accounts are grouped using the following structure:
 
-## Creating accounts
+```
+- Institution
+|-- Account
+|-- Account
+- Institution
+|-- Account
+...
+```
+
+Institutions represent the financial institution that an account belongs to (e.g., Chase, Wells Fargo, etc.). A financial institution can have multiple accounts, but an account can only belong to one institution.
+
+## Creating Accounts
 
 To create a new account, click on the plus icon on the top right of the `Accounts` page. Fill out the form with the account details:
 
-- **Institution**: Specify either an existing institution or create a new one by typing the name and pressing Enter.
 - **Account Name**: The name of the account (e.g., "Checking", "Savings", "Credit Card").
-
-:::note
-If you are syncing information from SimpleFIN, you will not need to manually create accounts here, as they will be created automatically during the sync process. You only need to create accounts manually if you are importing transactions via CSV or adding transactions manually.
-:::
+- **Institution**: Specify either an existing institution or create a new one by typing the name and pressing Enter.
 
 ## Reordering
 

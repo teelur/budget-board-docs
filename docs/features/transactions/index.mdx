@@ -1,0 +1,53 @@
+# Transactions
+
+Transactions represent the individual inflows and outflows of money in your financial accounts. They are the core data points that allow you to track your spending, income, and progress towards your financial goals.
+
+## Transaction Categorization
+
+Assigning categories to transactions allows you to organize your spending and set budgets for different areas of your finances.
+
+### Category Hierarchy
+
+Transaction categories have the following hierarchy:
+
+```
+- Parent Category
+|-- Child Category
+|-- Child Category
+- Parent Category
+- Parent Category
+|-- Child Category
+...
+```
+
+Parent categories represent broad areas of spending (e.g., Food & Dining, Utilities, Mortgage & Rent, etc.), and child categories further break down those areas into more specific categories (e.g., Groceries, Restaurants, etc.).
+
+:::note
+Parent categories are not required to have child categories. You can assign transactions directly to parent categories (whether it has children or not) if you prefer.
+:::
+
+### Custom Categories
+
+Budget Board includes a set of default categories for common types of spending, but you can create your own custom categories to better fit your personal finances.
+
+To create custom categories, open the `Transactions` page and click the gear icon to open `Transactions Settings`. You can create new categories under the `Custom Categories` section.
+
+:::tip
+If you would like to disable the built-in default categories, you can do so under the `Advanced Settings` section on the `Settings` page.
+:::
+
+### Assigning Categories
+
+There are a few ways to assign categories to transactions.
+
+#### Manually
+
+Clicking on a transaction will allow you to select a category from the dropdown.
+
+#### Automatic Rules
+
+Automatic rules can be used to apply categories to transactions based on a specified set of conditions. See the [Automatic Rules](./automatic-rules.mdx) page for details.
+
+#### Auto-Categorization
+
+The auto-categorization feature uses machine learning to predict the category of a transaction based on previously categorized transactions. See the [Auto-Categorization](./auto-categorization.mdx) page for details.
