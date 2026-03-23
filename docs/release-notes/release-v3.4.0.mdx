@@ -1,0 +1,39 @@
+---
+title: "Release v3.4.0"
+---
+
+## New Features
+
+### Transaction Export
+
+You can now export your transactions to a CSV file for use in other applications. Click on the `Export` button on the Transactions page to open the new dialog, where you can apply filters as well as select and rearrange the columns to include in the export.
+
+### External Provider Sync Start Date
+
+In previous versions, if you were to switch external providers or had to re-setup your external provider connection, running sync on the account would re-add the entire account history from the provider.
+This could lead to a lot of duplicate transactions if you had already been syncing for a while.
+With this update, you can now set a sync start date for each account, which will prevent any transactions before that date from being added to your Budget Board data.
+
+### Permanent Account Removal
+
+A new button has been added to the Deleted Accounts dialog to allow for permanently removing an account from your data. This is useful for accounts that you no longer want to keep any history of in your data. Please note that this action is irreversible and will permanently delete all data associated with the account (including transactions and balances).
+
+### Improved Add Goal Dialog
+
+The Add Goal dialog has been updated to match the style of the revised Import Transactions dialog. The new layout walks you through the configuration, rather than showing all options in a single pane.
+
+## What's Changed
+
+- Revise README by @teelur in https://github.com/teelur/budget-board/pull/768
+- Revise bug report template by @teelur in https://github.com/teelur/budget-board/pull/769
+- Coerce net worth categories to lowercase by @teelur in https://github.com/teelur/budget-board/pull/770
+- Improve add goal by @teelur in https://github.com/teelur/budget-board/pull/771
+- Missed some stuff from Add Goal updates by @teelur in https://github.com/teelur/budget-board/pull/772
+- Add sync start property to external provider accounts by @teelur in https://github.com/teelur/budget-board/pull/774
+- Add transaction export by @teelur in https://github.com/teelur/budget-board/pull/776
+- Bump flatted from 3.3.3 to 3.4.2 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/778
+- Fix modals by @teelur in https://github.com/teelur/budget-board/pull/779
+- Add perma delete account by @teelur in https://github.com/teelur/budget-board/pull/780
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/764
+
+**Full Changelog**: https://github.com/teelur/budget-board/compare/v3.3.1...v3.4.0
