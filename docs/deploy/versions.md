@@ -30,7 +30,7 @@ The latest CI build (tagged `dev`) is not recommended for use outside of the dev
       <td>vX.Y.Z</td>
       <td>Specific release for major version X, minor Y, and patch Z.</td>
     </tr>
-        <tr>
+    <tr>
       <td>dev</td>
       <td>Latest CI build (unstable). Use at your own risk.</td>
     </tr>
