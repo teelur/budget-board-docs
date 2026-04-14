@@ -6,6 +6,10 @@ sidebar_position: 3
 
 Budget Board images are published with the following tags.
 
+:::warning
+The latest CI build (tagged `latest`) is not recommended for use outside of the dev team, as it has not been thoroughly tested. Use it at your own risk.
+:::
+
 <table>
   <thead>
     <tr>
