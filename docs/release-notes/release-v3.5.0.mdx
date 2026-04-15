@@ -1,0 +1,102 @@
+---
+title: "Release v3.5.0"
+---
+
+## New Features
+
+:::warning
+This release includes some breaking changes, so please make sure to read through the release notes and update your compose file as needed before updating to this version.
+:::
+
+### Bulk Edit Transactions
+
+The transaction edit interface has been updated to allow for bulk editing of transactions.
+You can now select multiple transactions and apply edits to all of them at once.
+
+![Bulk Edit Transactions](/img/release-template/v3.5.0/bulk-edit-transactions.png)
+
+### Login Persistence Changes
+
+The previous login experience had different behaviors based on whether you logged in with email & password or with OIDC.
+This has been updated to be more consistent across login methods and to give users more control over session persistence.
+
+The default login session now lasts only for the browser session and will be cleared when the browser is closed.
+However, there is now a "Remember Me" option that will persist the session across browser restarts.
+
+![New Login Interface](/img/release-template/v3.5.0/new-login-interface.png)
+
+### Date Refactor
+
+There were a few places in the app where we were storing dates with time (and more importantly timezone) information, which was causing several small bugs around date handling.
+
+The time component of these dates (transactions, balances, values, etc.) isn't needed for any functionality in the app, so the database has been updated to only store the date component of these values.
+There isn't any user-facing change from this update, but there are some compose file changes that are needed to preserve timezone information.
+
+:::warning
+You will need to update your compose file to use the latest version from the repo, and add the `TZ` environment variable to your `compose.env` file with your local timezone (e.g. `TZ=America/New_York`).
+The following [Wikipedia page](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) has a list of valid timezone values.
+:::
+
+If you don't add this `TZ` environment variable, the database will default to UTC. This may cause dates to be off by one day depending on your local timezone, and you may need to manually correct them.
+
+### Spending by Category Graph
+
+A new graph has been added to the `Trends` page that breaks down spending by category and subcategory for a given month.
+
+![Spending by Category Graph](/img/release-template/v3.5.0/new-spending-by-category-graph.png)
+
+### Various UI/UX Tweaks
+
+There have been a few small UI/UX changes across the app this release.
+
+#### Direct Page URLs
+
+Pages and subpages in the app now have their own URLs, so you can navigate directly to them from the browser's address bar.
+This also improves browser navigation, allowing the Back and Forward buttons to move between pages as expected.
+
+#### Settings Moved to Subpages
+
+Previously, clicking on the settings button for various pages would open a modal with the settings for that page.
+Some of these modals were getting crowded and limited the type of content that could be displayed, especially on smaller screens.
+
+The settings for each page have now been moved to their own subpages (e.g. `/transactions/settings`), which allows more space for content and provides a more consistent experience across pages.
+
+This will allow me to update the `Custom Categories` settings page in future releases to improve the experience of managing custom categories.
+
+![New Settings Page](/img/release-template/v3.5.0/new-settings-page.png)
+
+### Build Tag Updates
+
+:::warning
+The `latest` and `release` image tags have been deprecated.
+If you are using either of these tags, you will need to update your compose file.
+:::
+
+The build tags have been updated:
+
+- The `latest` and `release` tags have been deprecated. It is recommended to update your compose file to use the specific version tag (e.g. `v3`), if you aren't already.
+- A new `dev` tag has been added to all non-release builds. It is not recommended for production use, since it may include breaking changes and bugs that haven't been fully tested yet. Use it at your own risk!
+
+## What's Changed
+
+- Bump picomatch from 4.0.2 to 4.0.4 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/787
+- Login persistence changes by @teelur in https://github.com/teelur/budget-board/pull/788
+- Bump lodash from 4.17.23 to 4.18.1 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/789
+- Minor dashboard tweaks by @teelur in https://github.com/teelur/budget-board/pull/790
+- Add spending by category by @teelur in https://github.com/teelur/budget-board/pull/791
+- Add bulk edit by @teelur in https://github.com/teelur/budget-board/pull/793
+- small tweaks to transactions by @teelur in https://github.com/teelur/budget-board/pull/794
+- scroll bar tweaks by @teelur in https://github.com/teelur/budget-board/pull/795
+- Update deps by @teelur in https://github.com/teelur/budget-board/pull/796
+- Navigation updates by @teelur in https://github.com/teelur/budget-board/pull/798
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/783
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/799
+- Fix mantine color scheme by @teelur in https://github.com/teelur/budget-board/pull/801
+- Fix some settings content loaders by @teelur in https://github.com/teelur/budget-board/pull/802
+- Refactor dates to be date only by @teelur in https://github.com/teelur/budget-board/pull/803
+- Bump axios from 1.14.0 to 1.15.0 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/804
+- update compose to set postgres timezone by @teelur in https://github.com/teelur/budget-board/pull/806
+- Some build updates by @teelur in https://github.com/teelur/budget-board/pull/807
+- Bump follow-redirects from 1.15.11 to 1.16.0 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/808
+
+**Full Changelog**: https://github.com/teelur/budget-board/compare/v3.4.0...v3.5.0
