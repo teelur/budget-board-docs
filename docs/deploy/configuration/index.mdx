@@ -30,13 +30,14 @@ If you are using the included postgresql container, the only value you need to s
 If you are using an external database, you will need to set all of these values to match your database configuration.
 :::
 
-| Option              | Details                                                                             |
-| ------------------- | ----------------------------------------------------------------------------------- |
-| `POSTGRES_HOST`     | The host for the PostgreSQL database.                                               |
-| `POSTGRES_PORT`     | The port for the PostgreSQL database.                                               |
-| `POSTGRES_DATABASE` | The PostgreSQL database name.                                                       |
-| `POSTGRES_USER`     | The PostgreSQL database user that Budget Board will use to connect to the database. |
-| `POSTGRES_PASSWORD` | The database user's password.                                                       |
+| Option              | Details                                                                                                                                                                                               |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `POSTGRES_HOST`     | The host for the PostgreSQL database.                                                                                                                                                                 |
+| `POSTGRES_PORT`     | The port for the PostgreSQL database.                                                                                                                                                                 |
+| `POSTGRES_DATABASE` | The PostgreSQL database name.                                                                                                                                                                         |
+| `POSTGRES_USER`     | The PostgreSQL database user that Budget Board will use to connect to the database.                                                                                                                   |
+| `POSTGRES_PASSWORD` | The database user's password.                                                                                                                                                                         |
+| `TZ`                | The timezone for the database (e.g. `America/New_York`). See the [list of valid timezone values](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If not set, defaults to UTC timezone. |
 
 ### OIDC Configuration
 
