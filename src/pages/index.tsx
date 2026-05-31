@@ -1,6 +1,7 @@
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
+import { BarChart2, Globe, RefreshCw, ShieldCheck, Wallet } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import styles from "./index.module.css";
 
@@ -39,14 +40,14 @@ function Hero() {
 
 type FeatureItem = {
   title: string;
-  icon: string;
+  icon: React.ReactNode;
   items: { label: string; description: string }[];
 };
 
 const FEATURES: FeatureItem[] = [
   {
     title: "Manage Finances",
-    icon: "💰",
+    icon: <Wallet size={28} />,
     items: [
       {
         label: "Accounts & Assets",
@@ -67,7 +68,7 @@ const FEATURES: FeatureItem[] = [
   },
   {
     title: "Data Import & Automation",
-    icon: "🔄",
+    icon: <RefreshCw size={28} />,
     items: [
       {
         label: "Transaction CSV Import",
@@ -92,7 +93,7 @@ const FEATURES: FeatureItem[] = [
   },
   {
     title: "Analytics & Insights",
-    icon: "📊",
+    icon: <BarChart2 size={28} />,
     items: [
       {
         label: "Financial Goals",
@@ -108,7 +109,7 @@ const FEATURES: FeatureItem[] = [
   },
   {
     title: "Security",
-    icon: "🔒",
+    icon: <ShieldCheck size={28} />,
     items: [
       {
         label: "User Authentication",
@@ -119,7 +120,7 @@ const FEATURES: FeatureItem[] = [
   },
   {
     title: "Internationalization",
-    icon: "🌍",
+    icon: <Globe size={28} />,
     items: [
       {
         label: "Multiple Languages",
@@ -264,7 +265,7 @@ function Screenshots() {
         />
       )}
       <div className={styles.sectionInner}>
-        <h2 className={styles.sectionTitle}>See It in Action</h2>
+        <h2 className={styles.sectionTitle}>Screenshots</h2>
         <div className={styles.screenshotScroll}>
           {SCREENSHOTS.map((s) => (
             <button
