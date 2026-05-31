@@ -44,7 +44,6 @@ const config: Config = {
       "classic",
       {
         docs: {
-          routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -68,6 +67,17 @@ const config: Config = {
         src: "img/budgetBoardIcon.svg",
       },
       items: [
+        {
+          type: "docSidebar",
+          sidebarId: "docs",
+          position: "left",
+          label: "Docs",
+        },
+        {
+          href: "https://demo.budgetboard.net",
+          label: "Demo",
+          position: "right",
+        },
         {
           href: "https://github.com/teelur/budget-board",
           label: "GitHub",

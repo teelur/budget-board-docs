@@ -16,11 +16,6 @@ const sidebars: SidebarsConfig = {
   docs: [
     {
       type: "doc",
-      id: "overview/index",
-      label: "Overview",
-    },
-    {
-      type: "doc",
       id: "quick-start-guide/index",
       label: "Quick Start Guide",
     },
@@ -91,6 +86,11 @@ const sidebars: SidebarsConfig = {
       type: "category",
       label: "Contributing",
       items: ["contributing/translations"],
+    },
+    {
+      type: "doc",
+      id: "ai-disclosure",
+      label: "AI Disclosure",
     },
     {
       type: "category",
