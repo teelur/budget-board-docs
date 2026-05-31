@@ -2,7 +2,9 @@
   // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": "."
+    // baseUrl is set in @docusaurus/tsconfig (required for @site/* paths alias).
+    // Remove this once Docusaurus updates their base tsconfig.
+    "ignoreDeprecations": "6.0"
   },
   "exclude": [".docusaurus", "build"]
 }

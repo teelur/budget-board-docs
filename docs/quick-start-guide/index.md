@@ -46,7 +46,7 @@ When an account is linked to an external provider (e.g., SimpleFIN, LunchFlow, e
 
 ### Import via CSV
 
-If your bank provides transaction data in CSV format or you are migrating from another application, you can import transaction data via CSV. See [Import via CSV](/docs/features/importing-data/csv-import) for details.
+If your bank provides transaction data in CSV format or you are migrating from another application, you can import transaction data via CSV. See [Import via CSV](../features/importing-data/csv-import) for details.
 
 ### Manually Create Transactions
 

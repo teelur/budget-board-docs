@@ -1,4 +1,5 @@
 import Link from "@docusaurus/Link";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import { BarChart2, Globe, RefreshCw, ShieldCheck, Wallet } from "lucide-react";
@@ -7,6 +8,7 @@ import styles from "./index.module.css";
 
 function Hero() {
   const { siteConfig } = useDocusaurusContext();
+  const quickStartUrl = useBaseUrl("docs/quick-start-guide");
   return (
     <header className={styles.hero}>
       <div className={styles.heroInner}>
@@ -17,7 +19,7 @@ function Hero() {
         />
         <p className={styles.tagline}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link className={styles.buttonPrimary} to="/docs/quick-start-guide">
+          <Link className={styles.buttonPrimary} to={quickStartUrl}>
             Get Started
           </Link>
           <Link
@@ -233,8 +235,12 @@ function Lightbox({ src, alt, onClose }: LightboxProps) {
       aria-label={alt}
     >
       <button
+        type="button"
         className={styles.lightboxClose}
-        onClick={onClose}
+        onClick={(e) => {
+          e.stopPropagation();
+          onClose();
+        }}
         aria-label="Close"
       >
         ✕
@@ -270,6 +276,7 @@ function Screenshots() {
           {SCREENSHOTS.map((s) => (
             <button
               key={s.alt}
+              type="button"
               className={styles.screenshotItem}
               onClick={() => setActive(s)}
               aria-label={`View ${s.alt} screenshot`}
