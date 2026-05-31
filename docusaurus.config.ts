@@ -69,6 +69,11 @@ const config: Config = {
       },
       items: [
         {
+          href: "https://demo.budgetboard.net",
+          label: "Demo",
+          position: "right",
+        },
+        {
           href: "https://github.com/teelur/budget-board",
           label: "GitHub",
           position: "right",
