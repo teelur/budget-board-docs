@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 /**
  * Any CSS included here will be global. The classic template
@@ -8,27 +8,27 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-base: 'IBM Plex Sans', sans-serif;
-  --ifm-heading-font-family: 'Plus Jakarta Sans', sans-serif;
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-font-family-base: "IBM Plex Sans", sans-serif;
+  --ifm-heading-font-family: "Plus Jakarta Sans", sans-serif;
+  --ifm-color-primary: #3c6ebe;
+  --ifm-color-primary-dark: #3562b0;
+  --ifm-color-primary-darker: #3059a8;
+  --ifm-color-primary-darkest: #274c8e;
+  --ifm-color-primary-light: #4a78c8;
+  --ifm-color-primary-lighter: #5481cc;
+  --ifm-color-primary-lightest: #6891d4;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+[data-theme="dark"] {
+  --ifm-color-primary: #7aa3e0;
+  --ifm-color-primary-dark: #6c96da;
+  --ifm-color-primary-darker: #638fd6;
+  --ifm-color-primary-darkest: #5079c3;
+  --ifm-color-primary-light: #88ade4;
+  --ifm-color-primary-lighter: #93b3e7;
+  --ifm-color-primary-lightest: #a5c2ed;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }

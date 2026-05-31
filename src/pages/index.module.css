@@ -1,0 +1,71 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(
+    160deg,
+    var(--ifm-background-color) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
+}
+
+.heroInner {
+  max-width: 640px;
+}
+
+.logo {
+  height: 120px;
+  margin-bottom: 2rem;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 2.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.buttonPrimary {
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.buttonPrimary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.buttonSecondary {
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.buttonSecondary:hover {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  text-decoration: none;
+}
