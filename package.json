@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "node scripts/fetch-remote-docs.mjs && docusaurus start",
+    "build": "node scripts/fetch-remote-docs.mjs && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "yarn run build && wrangler pages deploy ./build",
     "clear": "docusaurus clear",

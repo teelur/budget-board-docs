@@ -88,6 +88,11 @@ const sidebars: SidebarsConfig = {
       items: ["contributing/translations"],
     },
     {
+      type: "doc",
+      id: "ai-disclosure",
+      label: "AI Disclosure",
+    },
+    {
       type: "category",
       label: "Release Notes",
       items: [
