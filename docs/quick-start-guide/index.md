@@ -73,3 +73,9 @@ See the [Budgets](../features/budgets.mdx) page for details.
 Now that you have budgets set up, you can set up your financial goals. Goals allow you to set targets for milestones like savings targets or paying off debt, and track your progress towards those targets over time.
 
 See the [Goals](../features/goals.mdx) page for details.
+
+## Customize Your Dashboard
+
+The dashboard loads with a default layout that includes a few basic widgets, but you can customize the layout to better track your financial data.
+
+You can add, remove, resize, and rearrange widgets on the dashboard to your liking. See the [Dashboard](../features/dashboard.mdx) page for details on customizing your dashboard.
