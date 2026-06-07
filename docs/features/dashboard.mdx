@@ -4,6 +4,27 @@ The dashboard contains an overview of your financial situation, including accoun
 
 ## Customizing the Dashboard
 
+### Dashboard Layout
+
+You can modify the size and placement of widgets on the dashboard to your preferences. There are two different layout modes:
+
+- **Desktop**: This mode allows you to organize widgets in a grid pattern. Widgets can be resized along both horizontally and vertically.
+- **Mobile**: This mode organizes widgets in a single vertical column. Widget widths are fixed to the width of the screen, but can be resized vertically.
+
+:::note
+While Desktop and Mobile modes share the same set of widgets, the layouts for each mode are configured separately.
+This was done to allow you to tweak the layout for each mode independently without having to prioritize the layout of one screen size over the other.
+:::
+
+:::tip
+If you would like to generate the mobile layout based on the current desktop layout, you can use the `Reset to Desktop Order` button in the toolbar.
+:::
+
+### Widgets
+
+Widgets can be added to the dashboard from the `Add Widget` menu in the Edit Dashboard toolbar.
+Once added, widgets can be moved around by dragging the widget and resized by dragging the bottom right corner.
+
 ### Net Worth Widget
 
 The Net Worth widget can be used to aggregate the balances of multiple accounts or assets to give you a quick overview of your total financial standing. You can add or remove accounts from this widget by clicking the settings icon on the widget itself.
@@ -11,5 +32,33 @@ The Net Worth widget can be used to aggregate the balances of multiple accounts 
 Each line will aggregate values that can be grouped by the following criteria:
 
 - **Account Type**: Group accounts by their type (e.g., checking, savings, credit card).
-- **Assets**: Group all of your asset values together.
+- **Assets**: Group all of your asset values together, or by their type.
 - **Line Name**: Group other line values by their name.
+
+### Metrics Widget
+
+The Metrics widget can be used to track a number of different financial metrics, such as total spending for the month, goal progress, budget totals, and more.
+You can specify the data calculation using the following format:
+
+```
+@source.metric(period, key=value)
+```
+
+There is a detailed syntax reference in the configuration dialog.
+
+### Accounts Widget
+
+The accounts widget can be used to display the balances for a selection of accounts.
+You can select which accounts to include from the widget's configuration dialog.
+
+### Uncategorized Transactions Widget
+
+This widget shows transactions that do not have a category assigned.
+
+### Spending Trends Widget
+
+This widget shows a line plot of your total spending for the month so far, compared to your spending from the previous month.
+
+:::note
+This widget only includes transactions that are categorized with `expense` type categories.
+:::
