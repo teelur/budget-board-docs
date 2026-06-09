@@ -76,6 +76,6 @@ See the [Goals](../features/goals.mdx) page for details.
 
 ## Customize Your Dashboard
 
-The dashboard loads with a default layout that includes a few basic widgets, but you can customize the layout to better track your financial data.
+The dashboard loads with a default layout that includes a few basic widgets. You can customize this layout to better track your financial data.
 
 You can add, remove, resize, and rearrange widgets on the dashboard to your liking. See the [Dashboard](../features/dashboard.mdx) page for details on customizing your dashboard.
