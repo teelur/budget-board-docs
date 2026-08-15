@@ -1,0 +1,119 @@
+---
+title: "Release v3.7.0"
+---
+
+:::note
+This release fixes a bug with setting a custom port for the Docker container. You may need to update your `compose.yml` and `compose.env` files if you wish to change this port.
+:::
+
+## New Features
+
+A majority of the work for this release was focused on backend cleanup and refactoring.
+The refactoring work focused on consolidating repetitive code and improving the test coverage to make future development easier.
+Because of this, the new features list is a bit smaller than usual.
+
+### Privacy Mode
+
+A new button has been added to the header that allows you to hide sensitive values (transaction amounts, account balances, calculations, etc.) across the app.
+This is useful if you are sharing your screen or just want to hide sensitive information from prying eyes.
+
+### Transaction Tags
+
+A new system allows you to add custom tags to transactions. These tags can be used to filter transactions beyond the usual categorization system.
+These tags can be set manually on a transaction or automatically through the rules system.
+
+### Transaction Notes
+
+We have also added a notes field to transactions, which allows you to add free-form notes about a transaction.
+This can be useful for adding context to a transaction or for keeping track of additional information.
+
+## Notable Bug Fixes
+
+### Fixed Custom Docker Port
+
+Previously, the Docker Compose file specified a `PORT` environment variable that was expected to change the external port for the Budget Board container.
+This was not working as expected, since that variable is also used internally by the nginx service.
+A new `CUSTOM_PORT` environment variable has been added to allow you to specify a custom port for the container without affecting the internal nginx configuration.
+
+### Misc Custom Category Fixes
+
+There were several places where custom income categories were not being included in the income groups in budgets and trends. This has been fixed.
+
+## What's Changed
+
+- Change API calls to use centralized query keys by @teelur in https://github.com/teelur/budget-board/pull/900
+- Migrate account api by @teelur in https://github.com/teelur/budget-board/pull/901
+- Some backend Account logic cleanup by @teelur in https://github.com/teelur/budget-board/pull/902
+- Migrate account type api by @teelur in https://github.com/teelur/budget-board/pull/903
+- Asset type cleanup by @teelur in https://github.com/teelur/budget-board/pull/904
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/895
+- Update README.md by @teelur in https://github.com/teelur/budget-board/pull/898
+- fix migration issues by @teelur in https://github.com/teelur/budget-board/pull/906
+- need to parent orphaned accounts by @teelur in https://github.com/teelur/budget-board/pull/907
+- Application user cleanup by @teelur in https://github.com/teelur/budget-board/pull/933
+- Fix now provider by @teelur in https://github.com/teelur/budget-board/pull/935
+- Asset cleanup by @teelur in https://github.com/teelur/budget-board/pull/936
+- Assset type cleanup by @teelur in https://github.com/teelur/budget-board/pull/938
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/905
+- Automatic rule cleanup by @teelur in https://github.com/teelur/budget-board/pull/942
+- Update deps by @teelur in https://github.com/teelur/budget-board/pull/943
+- Bump form-data from 4.0.5 to 4.0.6 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/944
+- Bump tar from 7.5.11 to 7.5.19 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/945
+- Bump @babel/core from 7.26.10 to 8.0.1 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/946
+- Clean up deps by @teelur in https://github.com/teelur/budget-board/pull/947
+- Update OpenTelemetry by @teelur in https://github.com/teelur/budget-board/pull/948
+- Update balance api by @teelur in https://github.com/teelur/budget-board/pull/949
+- Cleanup budget api by @teelur in https://github.com/teelur/budget-board/pull/950
+- Goals cleanup by @teelur in https://github.com/teelur/budget-board/pull/953
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/940
+- Fix OIDC login linking by @teelur in https://github.com/teelur/budget-board/pull/955
+- Institution cleanup by @teelur in https://github.com/teelur/budget-board/pull/957
+- Transaction category cleanup by @teelur in https://github.com/teelur/budget-board/pull/958
+- Sort resource strings by @teelur in https://github.com/teelur/budget-board/pull/959
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/954
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/960
+- remove unused keys from resource files by @teelur in https://github.com/teelur/budget-board/pull/962
+- Transaction api updates by @teelur in https://github.com/teelur/budget-board/pull/966
+- Remove conditional service creation for oidc by @teelur in https://github.com/teelur/budget-board/pull/967
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/961
+- User settings cleanup by @teelur in https://github.com/teelur/budget-board/pull/972
+- Fix category does not exist error by @teelur in https://github.com/teelur/budget-board/pull/973
+- Update value api by @teelur in https://github.com/teelur/budget-board/pull/974
+- Add option to apply one account name to entire CSV import by @jsmith613 in https://github.com/teelur/budget-board/pull/975
+- Widget settings cleanup by @teelur in https://github.com/teelur/budget-board/pull/977
+- Bump brace-expansion from 1.1.14 to 1.1.16 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/979
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/969
+- Add Brazilian Portuguese translation by @joao-baza-sup-uf in https://github.com/teelur/budget-board/pull/981
+- Net worth cleanup by @teelur in https://github.com/teelur/budget-board/pull/983
+- fix: register 2FA cookie schemes by @joao-baza-sup-uf in https://github.com/teelur/budget-board/pull/982
+- Update deps by @teelur in https://github.com/teelur/budget-board/pull/986
+- Bump brace-expansion from 1.1.16 to 1.1.18 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/987
+- Bump tar from 7.5.19 to 7.5.22 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/988
+- Bump @babel/core from 7.29.0 to 8.0.1 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/989
+- feat: Add privacy mode by @joao-baza in https://github.com/teelur/budget-board/pull/985
+- Update demo seed service tests by @teelur in https://github.com/teelur/budget-board/pull/990
+- Sync service cleanup by @teelur in https://github.com/teelur/budget-board/pull/991
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/980
+- Lunchflow api cleanup by @teelur in https://github.com/teelur/budget-board/pull/993
+- Simplefin api cleanup by @teelur in https://github.com/teelur/budget-board/pull/994
+- Cleanup automatic categorization api by @teelur in https://github.com/teelur/budget-board/pull/997
+- Cleanup auth api by @teelur in https://github.com/teelur/budget-board/pull/998
+- Bump ip-address from 10.2.0 to 10.4.0 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/995
+- Translations update from Hosted Weblate by @weblate in https://github.com/teelur/budget-board/pull/992
+- Fix new net worth line error by @teelur in https://github.com/teelur/budget-board/pull/999
+- Bump @babel/core from 7.29.0 to 8.0.1 in /client by @dependabot[bot] in https://github.com/teelur/budget-board/pull/1000
+- Update babel to address cve by @teelur in https://github.com/teelur/budget-board/pull/1001
+- Update brace-expansion by @teelur in https://github.com/teelur/budget-board/pull/1002
+- Add transaction notes by @teelur in https://github.com/teelur/budget-board/pull/1003
+- Add transaction tags by @teelur in https://github.com/teelur/budget-board/pull/1004
+- Add new automatic rules options by @teelur in https://github.com/teelur/budget-board/pull/1009
+- Handle disable categories by @teelur in https://github.com/teelur/budget-board/pull/1010
+- Misc category type fixes by @teelur in https://github.com/teelur/budget-board/pull/1012
+- Fix docker port by @teelur in https://github.com/teelur/budget-board/pull/1013
+
+## New Contributors
+
+- @joao-baza-sup-uf made their first contribution in https://github.com/teelur/budget-board/pull/981
+- @joao-baza made their first contribution in https://github.com/teelur/budget-board/pull/985
+
+**Full Changelog**: https://github.com/teelur/budget-board/compare/v3.6.1...v3.7.0
