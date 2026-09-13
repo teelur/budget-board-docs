@@ -106,14 +106,18 @@ If your CSV has separate columns for income and expenses, enable this option and
 
 If your CSV contains a column indicating whether a transaction is income or expense, enable this option and map that column. Specify which values denote expenses; all other values will be treated as income.
 
-#### Filter duplicates
-
-If you're importing into an account that already contains transactions, enable this option to filter duplicates. Choose which columns should be used to detect duplicates.
-
 ## Map accounts
 
 In the `Account Mapping` section, map account names from your CSV to accounts in Budget Board.
 
+## Review duplicate transactions
+
+After you map the CSV accounts, Budget Board checks the transactions against existing transactions in their target accounts. Review the transactions flagged as duplicates before importing them.
+
+The review step explains why each transaction was considered a duplicate. Performing this check after account mapping prevents transactions in separate accounts from being incorrectly flagged as duplicates.
+
 ## Import the transactions
 
 Once the previous steps are complete, the `Import` button will be enabled and will show the number of transactions to be imported. Click it to start the import process.
+
+The import runs as a background process on the server. A progress indicator in the web client shows the import status while you continue working in Budget Board. This allows large imports to finish without keeping the original request open until all transactions have been processed.

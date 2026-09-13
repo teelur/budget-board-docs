@@ -1,0 +1,93 @@
+---
+title: "Release v3.8.0"
+---
+
+## New Features
+
+This release introduces several new features to help users manage their transactions, visualize monthly cash flow, and improve overall navigation.
+
+### Transaction Updates
+
+#### Recurring Transaction Tracking
+
+For most people, a large portion of their monthly spending consists of recurring transactions, such as rent, utilities, car payments, and subscriptions.
+Tracking these recurring transactions can help you understand how much money you have available for discretionary spending each month.
+
+A new sub-page has been added to the Transactions page for creating and managing your recurring transactions.
+You can set up rules to define how recurring transactions are identified, including the transaction amount, frequency, and category.
+
+![Recurring Transaction Rules](/img/release-template/v3.8.0/recurring_rules.png)
+
+From there, you can mark transactions as recurring, and Budget Board will use this data to predict future occurrences.
+These predictions will show up on the Budgets page, providing an estimate of your spending for the month ahead.
+
+![Predicted Budget](/img/release-template/v3.8.0/predicted_budget.png)
+
+#### Transfer Transactions
+
+Transfer transactions move money from one of your accounts to another without changing the net cash flow of your overall budget.
+Examples include moving money to your savings account or paying off a credit card balance (assuming you are tracking individual credit card transactions).
+
+![Transfer Transactions](/img/release-template/v3.8.0/transfer_transactions.png)
+
+A new feature has been added to allow you to group inflow and outflow transfer transactions together to better highlight the movement of money between your accounts.
+
+### CSV Import Improvements
+
+#### Background CSV imports
+
+Previously, very large imports would take long enough that the HTTP request could time out, causing the import to fail.
+
+![Background CSV Imports](/img/release-template/v3.8.0/background_import.png)
+
+This update moves the import to a background process on the server that the web client can poll for progress updates.
+There is a new progress indicator in the web client that allows you to continue working in the app while your import runs in the background.
+
+#### CSV duplicate review
+
+The duplicate transaction review feature has been relocated to its own step in the import process, placing it after you have assigned transactions to their accounts.
+This fixes a previous issue where duplicate transactions would be flagged even if they were in separate accounts.
+
+![CSV Duplicate Review](/img/release-template/v3.8.0/duplicate_transactions.png)
+
+The new step also provides more information about why the transactions are considered duplicates.
+
+### Widget Updates
+
+#### New Cash Flow Sankey Chart
+
+A new Cash Flow Sankey Chart widget has been added to help visualize the flow of money between the different transaction categories.
+
+![Cash Flow Sankey Chart](/img/release-template/v3.8.0/sankey.png)
+
+The chart can also be found under the Trends page.
+
+#### Custom Metric Date Ranges
+
+The Metrics widget has been updated to support more complex custom date ranges, allowing you to specify more precise time periods for your data analysis.
+
+![Custom Metric Date Ranges](/img/release-template/v3.8.0/new_metric_range.png)
+
+### UI Enhancements
+
+#### Month-Based Transaction Browsing
+
+The transactions page has been updated to support month-based browsing instead of arbitrary page numbers.
+The browsing experience should now be similar to navigating budgets.
+
+![Month-Based Transaction Browsing](/img/release-template/v3.8.0/transactions_page_months.png)
+
+#### Sidebar Navigation
+
+The sidebar has been updated from the smaller list of icons to a more comprehensive navigation menu that includes both the top-level pages and the sub-pages that were previously under the settings button.
+This should make it easier for newer users to find certain features and make navigation more intuitive for familiar users.
+
+![Sidebar Navigation](/img/release-template/v3.8.0/new_sidebar.png)
+
+The sidebar can be collapsed back to the smaller list of icons by clicking the collapse button at the top of the sidebar.
+
+#### Budget Icons
+
+The budget page now includes icons for each budget category, allowing you to quickly identify and differentiate between categories at a glance.
+
+![Budget Icons](/img/release-template/v3.8.0/budget_icons.png)
