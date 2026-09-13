@@ -46,6 +46,14 @@ You can specify the data calculation using the following format:
 
 There is a detailed syntax reference in the configuration dialog.
 
+The Metrics widget also supports custom date ranges, allowing you to define more precise periods for the data calculation instead of relying only on the standard periods.
+
+#### Period Schema
+
+The `period` argument can be a named period, or a custom range with `start` and `end` values. A period boundary can use a relative period, an indexed period, and a boundary position such as `start`, `end`, or a day number.
+
+Use a named period when the built-in period is sufficient. Use `start` and `end` when the metric needs a custom range. Indexed periods use an offset from the current period. A numeric boundary selects a day within the period, while `:start` and `:end` select the beginning and end boundaries.
+
 ### Accounts Widget
 
 The accounts widget can be used to display the balances for a selection of accounts.
@@ -62,3 +70,7 @@ This widget shows a line plot of your total spending for the month so far, compa
 :::note
 This widget only includes transactions that are categorized with `expense` type categories.
 :::
+
+### Cash Flow Sankey Chart Widget
+
+The Cash Flow Sankey Chart visualizes the flow of money between transaction categories. The same chart is also available on the [Trends page](/docs/features/trends).

@@ -67,6 +67,7 @@ const sidebars: SidebarsConfig = {
           ],
         },
         "features/dashboard",
+        "features/trends",
         "features/accounts",
         "features/assets",
         {
@@ -74,6 +75,7 @@ const sidebars: SidebarsConfig = {
           label: "Transactions",
           link: { type: "doc", id: "features/transactions/index" },
           items: [
+            "features/transactions/recurring-transactions",
             "features/transactions/automatic-rules",
             "features/transactions/auto-categorization",
           ],
