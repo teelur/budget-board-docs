@@ -1,6 +1,6 @@
 # Dashboard
 
-The dashboard contains an overview of your financial situation, including account balances, uncategorized transactions, and monthly spending trends. Some components of the dashboard can be customized.
+The dashboard contains an overview of your financial situation, including account balances, uncategorized transactions, and monthly transaction trends. Some components of the dashboard can be customized.
 
 ## Customizing the Dashboard
 
@@ -46,6 +46,12 @@ You can specify the data calculation using the following format:
 
 There is a detailed syntax reference in the configuration dialog.
 
+Transaction metrics can be limited to a specific account with the `account` parameter. Use an account name as its value:
+
+```
+@transactions.sum(this_month, account=Checking)
+```
+
 The Metrics widget also supports custom date ranges, allowing you to define more precise periods for the data calculation instead of relying only on the standard periods.
 
 #### Period Schema
@@ -63,13 +69,11 @@ You can select which accounts to include from the widget's configuration dialog.
 
 This widget shows transactions that do not have a category assigned.
 
-### Spending Trends Widget
+### Transaction Trends Widget
 
-This widget shows a line plot of your total spending for the month so far, compared to your spending from the previous month.
+This widget compares your running transaction total for the current month with the previous month. Open the widget settings to choose categories to include. If no categories are selected, choose whether to show **Spending** or **Income**.
 
-:::note
-This widget only includes transactions that are categorized with `expense` type categories.
-:::
+You can add multiple Transaction Trends widgets and configure each one separately. The same chart is available on the [Trends page](/docs/features/trends).
 
 ### Cash Flow Sankey Chart Widget
 
