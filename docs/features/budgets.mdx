@@ -28,6 +28,8 @@ You can carry a budget's remaining balance from one month to the next. On a budg
 
 The amount left unspent is added to the following month's budget, while overspending is subtracted from it. The balance accumulates from the month you choose.
 
+The starting month can be the budget's current month or an earlier month. A future month cannot be selected.
+
 You can enable rollovers for a parent category or its subcategories, but not both at the same time. A parent category's spending already includes its subcategories; rolling over the parent lets money left over in one subcategory cover overspending in another.
 
 ### Budget Colors
@@ -60,6 +62,40 @@ If the category is a parent, or a child with no parent budget, it appears in the
 #### Unbudgeted Child Categories
 
 If the category is a child and its parent has a budget, it appears under the parent category in the budgets list.
+
+## Importing and Exporting Budgets
+
+You can export one month's budget as a JSON file and import it into another month.
+
+### Exporting a Budget
+
+Open the `Budgets` page and select a month. Open `Import / Export` in the toolbar, then select `Export This Budget`.
+
+The downloaded file includes:
+
+- The budget's parent and child categories
+- Budget limits
+- Rollover settings
+- Category types
+- Category icons
+
+### Importing a Budget
+
+Open the `Budgets` page and select `Import / Export` in the toolbar, then select `Import A Budget`.
+
+The import process:
+
+1. Select a `.json` budget file. Files larger than 5 MB are not accepted.
+2. Review validation warnings and errors.
+3. Preview the categories, target month, income, expenses, and net budget.
+4. Choose whether to overwrite existing budget limits and rollover settings for matching categories.
+5. Resolve any categories that do not exist in your account:
+   - `Create` the category
+   - `Map` it to an existing category
+   - `Skip` it
+6. Import the budget.
+
+The import is applied to the month you select. If more than one template category maps to the same account category, change the mappings before importing.
 
 ## Predicted Spending
 

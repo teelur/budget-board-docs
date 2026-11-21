@@ -1,0 +1,32 @@
+---
+title: "Release v3.9.2"
+---
+
+## New Features
+
+### Budget Import and Export
+
+Monthly budgets can now be exported as JSON files and imported into another month.
+
+The import workflow validates the file, previews its categories and totals, selects a target month, and lets you choose whether to overwrite matching budgets.
+If a template contains categories that do not exist in your account, you can create those categories, map them to existing categories, or skip them.
+
+See [Budgets](/docs/features/budgets) for details.
+
+### Direct Transfer Creation
+
+The Create Transaction dialog now supports a dedicated Transfer mode.
+
+Select a source account, destination account, date, and amount to create the linked outgoing and incoming transactions automatically.
+Both transactions are assigned to the Transfer category and do not run through automatic categorization or recurring-rule matching.
+
+See [Transactions](/docs/features/transactions) for details.
+
+### Rollover Start Months
+
+Budget rollover settings can now start in the current month as well as in an earlier month.
+
+## Improvements and Fixes
+
+- Fixed dashboard account and net-worth widget to allow scrolling.
+- Removed deleted institutions from account creation.
